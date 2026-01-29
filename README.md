@@ -54,7 +54,6 @@ Pour démarrer le projet, exécutez : `npm run dev`
 ## Conventions de Codage
 
 - Utilisez ESLint pour le style de code.
-- Suivez les conventions de nommage [décrire les conventions].
 
 ## Contributions
 
