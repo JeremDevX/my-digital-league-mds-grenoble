@@ -1,36 +1,66 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+# My Digital League MDS Grenoble
 
-First, run the development server:
+## Introduction
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Projet LAN de MyDigitalSchool Grenoble - My Digital League.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Installation
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Pour installer le projet, suivez ces étapes :
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Clonez le dépôt : `git clone <url-du-dépôt>`
+2. Accédez au dossier du projet : `cd my-digital-league-mds-grenoble`
+3. Installez les dépendances : `npm install`
 
-## Learn More
+## Structure du Projet
 
-To learn more about Next.js, take a look at the following resources:
+- **Racine du Projet**
+  - `eslint.config.mjs`: Configuration pour ESLint.
+  - `next-env.d.ts`: Déclarations de types pour Next.js.
+  - `next.config.ts`: Configuration de Next.js.
+  - `package.json`: Dépendances et scripts du projet.
+  - `README.md`: Documentation du projet.
+  - `tsconfig.json`: Configuration TypeScript.
+  - `vitest.config.ts`: Configuration pour Vitest.
+  - `vitest.shims.d.ts`: Déclarations de types pour Vitest.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Dossier `app/`**
+  - `layout.tsx`: Composant de mise en page principal.
+  - `page.module.scss`: Styles globaux pour la page.
+  - `page.tsx`: Composant de la page principale.
+  - **Dossier `components/`**: Contient des composants réutilisables.
+    - **Dossier `Card/`**: Composant de carte.
+      - `Card.module.scss`: Styles pour le composant de carte.
+      - `Card.stories.tsx`: Histoires pour le composant de carte (pour Storybook).
+      - `Card.tsx`: Composant de carte.
+    - **Dossier `login/`**: Composant de connexion.
+      - `page.module.scss`: Styles pour la page de connexion.
+      - `page.tsx`: Composant de la page de connexion.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Dossier `styles/`**
+  - `globals.scss`: Styles globaux pour l'application.
+  - `reset.scss`: Styles de réinitialisation.
+  - `utilities.scss`: Classes utilitaires.
+  - `variables.scss`: Variables SCSS.
 
-## Deploy on Vercel
+- **Dossier `public/`**: Contient des fichiers statiques accessibles publiquement.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Utilisation
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Pour démarrer le projet, exécutez : `npm run dev`
+
+## Conventions de Codage
+
+- Utilisez ESLint pour le style de code.
+- Suivez les conventions de nommage [décrire les conventions].
+
+## Contributions
+
+Pour contribuer au projet :
+
+1. Créez une branche pour votre fonctionnalité : `git checkout -b ma-fonctionnalité`
+2. Effectuez vos modifications et validez : `git commit -m 'Ajout d'une nouvelle fonctionnalité'`
+3. Poussez votre branche : `git push origin ma-fonctionnalité`
+4. Ouvrez une pull request.
