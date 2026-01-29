@@ -1,0 +1,55 @@
+// ===== MIXINS =====
+
+@mixin flex-row-to-column {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  @media (min-width: $--mobile) {
+    flex-direction: column;
+  }
+}
+
+@mixin visible-from-tablet {
+  display: none;
+  @media (min-width: $--tablet) {
+    display: block;
+  }
+}
+
+@mixin visible-from-desktop {
+  display: none;
+  @media (min-width: $--desktop) {
+    display: block;
+  }
+}
+
+@mixin hidden-from-tablet {
+  @media (min-width: $--tablet) {
+    display: none !important;
+  }
+}
+
+@mixin hidden-from-desktop {
+  @media (min-width: $--desktop) {
+    display: none !important;
+  }
+}
+
+@mixin truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+// visible uniquement lecteurs d'ecrans (ex: ajout descritpion descritpion cachée a un bouton)
+@mixin sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
