@@ -1,0 +1,14 @@
+@import "../../styles/variables.scss";
+
+.button {
+  border-radius: $--border-radius-sm;
+  padding: $--spacing-sm $--spacing-md;
+  background-color: $--color-bg-card-dark;
+  color: $--color-light;
+  border: 2px solid $--color-primary;
+  cursor: pointer;
+}
+
+.bgFull {
+  background-color: $--color-primary;
+}
