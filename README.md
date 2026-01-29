@@ -15,7 +15,7 @@ Ce dépôt contient une application [Next.js](https://nextjs.org) initialisée a
 
 ## Prérequis
 
-- Node.js (version 25.x ou supérieure)
+- Node.js (version 24.x ou supérieure)
 - npm (ou un autre gestionnaire de paquets compatible)
 
 ## Installation
