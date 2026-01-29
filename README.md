@@ -8,11 +8,10 @@ Ce dépôt contient une application [Next.js](https://nextjs.org) initialisée a
 
 - [Prérequis](#prerequis)
 - [Installation](#installation)
-- [Démarrage](#demarrage)
+- [Demarrage](#demarrage)
 - [Structure du projet](#structure-du-projet)
 - [Conventions de code](#conventions-de-code)
 - [Contribution](#contribution)
-- [Bonus - idées d'amélioration](#bonus---idees-damelioration)
 
 ## Prérequis
 
@@ -28,7 +27,7 @@ Ce dépôt contient une application [Next.js](https://nextjs.org) initialisée a
 3. Installez les dépendances :
    - `npm install`
 
-## Démarrage
+## Demarrage
 
 - En développement : `npm run dev` pour lancer le serveur de développement.
 - En développement : `npm run lint` pour vérifier le style de code avec ESLint.
@@ -74,6 +73,7 @@ Ce dépôt contient une application [Next.js](https://nextjs.org) initialisée a
 - Prettier pour le formatage (Format on Save activé).
 - PascalCase pour les composants et leurs fichiers.
 - kebab-case pour les dossiers de routes/pages (ex. app/ma-page).
+- camelCase pour les variables et fonctions.
 - Modules SCSS pour les styles.
 - Nommage de branches : feat/ma-fonctionnalite, fix/mon-correctif, refactor/, chore/, docs/, style/, test/.
 
