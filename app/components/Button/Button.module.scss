@@ -1,6 +1,7 @@
 @import "../../styles/variables.scss";
 
 .button {
+  text-align: center;
   border-radius: $--border-radius-sm;
   padding: $--spacing-sm $--spacing-md;
   background-color: $--color-bg-card-dark;
