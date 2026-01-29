@@ -15,8 +15,11 @@ Ce dépôt contient une application [Next.js](https://nextjs.org) initialisée a
 
 ## Prérequis
 
-- Node.js (version 24.x ou supérieure)
-- npm (ou un autre gestionnaire de paquets compatible)
+- Installer la version de Node.js indiquée dans le fichier `.nvmrc` ou utiliser une version récente :
+```bash
+nvm install
+nvm use
+```
 
 ## Installation
 
