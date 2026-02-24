@@ -1,13 +1,35 @@
-@import "../../styles/variables.scss";
+@use "../../styles/variables.scss" as *;
 
 .toggleContainer {
   display: flex;
   flex-direction: column;
-  gap: $--spacing-xs;
+  gap: $--spacing-xs; //
+
+  &.small {
+    --width: 34px;
+    --height: 18px;
+    --dot-size: 10px;
+    --travel-distance: 16px;
+  }
+
+  &.medium {
+    --width: 44px;
+    --height: 24px;
+    --dot-size: 16px;
+    --travel-distance: 20px;
+  }
+
+  &.large {
+    --width: 54px;
+    --height: 30px;
+    --dot-size: 22px;
+    --travel-distance: 24px;
+  }
 
   &.disabled {
     opacity: 0.6;
     cursor: not-allowed;
+
     .slider,
     .label {
       cursor: not-allowed;
@@ -30,13 +52,14 @@
 
   &:checked + .slider {
     background-color: $--color-primary;
+
     &::before {
       transform: translateX(var(--travel-distance));
     }
   }
 
   &:focus + .slider {
-    box-shadow: 0 0 0 2px $--color-primary-light;
+    box-shadow: 0 0 0 2px $--color-primary-light; //
   }
 }
 
@@ -70,24 +93,5 @@
 .helperText {
   font-size: $--font-size-xs;
   color: $--color-text-dark;
-  margin-left: calc(var(--width) + 0.8rem);
-}
-
-.small {
-  --width: 34px;
-  --height: 18px;
-  --dot-size: 10px;
-  --travel-distance: 16px;
-}
-.medium {
-  --width: 44px;
-  --height: 24px;
-  --dot-size: 16px;
-  --travel-distance: 20px;
-}
-.large {
-  --width: 54px;
-  --height: 30px;
-  --dot-size: 22px;
-  --travel-distance: 24px;
+  margin-left: calc(var(--width) + $--spacing-sm);
 }
