@@ -1,0 +1,135 @@
+@import "../../styles/variables.scss";
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: $--spacing-md $--spacing-lg;
+  position: relative;
+  background: $--color-bg-card-dark;
+  justify-content: space-between;
+  gap: $--spacing-lg;
+
+  .containerLogo {
+    flex: 0 0 auto;
+    line-height: 0;
+  }
+
+  .burgerButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    margin-left: auto;
+
+    .buttonOpen {
+      display: block;
+      width: 2.25rem;
+      height: 3rem;
+      background: $--color-light;
+      margin: $--spacing-xs 0;
+      border-radius: $--border-radius-sm;
+      transition: all 0.3s ease;
+    }
+
+    @media (min-width: $--tablet) {
+      display: none;
+    }
+  }
+
+  .buttonOpen span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+  .buttonOpen span:nth-child(2) {
+    opacity: 0;
+  }
+  .buttonOpen span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  .containerNav {
+    display: flex;
+    align-items: center;
+    gap: $--spacing-md;
+    flex: none;
+    justify-content: flex-start;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: $--color-bg-card-dark;
+    flex-direction: column;
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+
+    &[data-open="true"] {
+      max-height: 500px;
+    }
+
+    @media (min-width: $--tablet) {
+      position: static;
+      flex-direction: row;
+      gap: $--spacing-xl;
+      flex: 1;
+      justify-content: space-between;
+      max-height: none;
+      overflow: visible;
+      transition: none;
+      background: transparent;
+    }
+  }
+}
+
+.logo {
+  width: 130px;
+}
+
+.nav {
+  flex-direction: column;
+  align-items: baseline;
+  gap: 1.6rem;
+  width: 100%;
+  margin: 0;
+  margin-left: 62px;
+  display: flex;
+
+  @media (min-width: $--tablet) {
+    flex-direction: row;
+    gap: $--spacing-xl;
+    width: auto;
+    margin: 0 auto;
+  }
+}
+
+.navLink {
+  color: $--color-light;
+  font-size: $--font-size-xs;
+  text-decoration: none;
+  transition: color 0.2s;
+  font-weight: 400;
+  &:hover {
+    color: $--color-secondary;
+  }
+}
+
+.actions {
+  display: flex;
+  gap: $--spacing-sm;
+  align-items: center;
+  flex: 0 0 auto;
+  flex-direction: column;
+  width: 100%;
+  gap: $--spacing-md;
+
+  @media (min-width: $--tablet) {
+    flex-direction: row;
+    width: auto;
+    gap: $--spacing-sm;
+  }
+}
