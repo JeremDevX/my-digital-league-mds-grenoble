@@ -1,0 +1,40 @@
+@import "../../styles/variables.scss";
+
+.inputContainer {
+  margin-bottom: $--spacing-md;
+  display: flex;
+  flex-direction: column;
+}
+
+.inputLabel {
+  margin-bottom: $--spacing-sm;
+  font-weight: bold;
+}
+
+.inputField {
+  padding: $--spacing-sm;
+  border-radius: $--border-radius-sm;
+  border: 1px solid $--color-light;
+  font-size: $--font-size-md;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.inputField:focus {
+  outline: none;
+  border-color: $--color-primary;
+}
+
+.inputField.errorActive {
+  border-color: #FF5252; 
+}
+
+.inputField.errorActive:focus {
+  outline: none;
+  border-color: #FF5252;
+}
+
+.errorMessage {
+  color: #FF5252; 
+  font-size: $--font-size-md;
+  margin-top: $--spacing-sm;
+}
