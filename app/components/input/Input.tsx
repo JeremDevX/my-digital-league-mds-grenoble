@@ -13,32 +13,22 @@ interface InputProps{
 }
 
 
-export default function Input({ 
-  label, 
-  placeholder, 
-  value, 
-  onChange, 
-  disabled , 
-  type, 
-  error, 
-  errorMessage,
-  obligatory}: InputProps) {
-
+export default function Input(props: InputProps) {
 
   return (
     <div className="inputContainer">
-      {label && <label className="inputLabel">{label} {obligatory && <span className="required">*</span>}</label>}
+      {props.label && <label className="inputLabel">{props.label} {props.obligatory && <span className="required">*</span>}</label>}
       <input
-        type={type || "text"}
-        placeholder={placeholder}
-        value={value}
-        onChange={(e) => onChange?.(e.target.value)}
-        disabled={disabled}
-        className={`inputField ${error ? 'errorActive' : ''}`}
+        type={props.type || "text"}
+        placeholder={props.placeholder}
+        value={props.value}
+        onChange={(e) => props.onChange?.(e.target.value)}
+        disabled={props.disabled}
+        className={`inputField ${props.error ? 'errorActive' : ''}`}
       />
 
-      {error && errorMessage && (
-        <span className="errorMessage">{errorMessage}</span>
+      {props.error && props.errorMessage && (
+        <span className="errorMessage">{props.errorMessage}</span>
       )}
     </div>
   );
