@@ -1,0 +1,43 @@
+@import "../../styles/variables.scss";
+
+.radioWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: $--spacing-xs;
+}
+
+.radio {
+  display: flex;
+  align-items: center;
+  gap: $--spacing-xs;
+  cursor: pointer;
+  color: $--color-light;
+  font-size: 14px;
+  &:has(input:disabled) {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+}
+
+.input {
+  display: none;
+}
+
+.circle {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid $--color-primary;
+  background-color: $--color-bg-card-dark;
+}
+
+.checked {
+  background-color: $--color-primary;
+}
+
+.helperText {
+  color: $--color-text-dark;
+  font-size: $--font-size-xs;
+  margin-left: calc(16px + $--spacing-xs + 2px);
+  line-height: 1.3;
+}
