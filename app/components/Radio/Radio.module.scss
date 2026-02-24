@@ -1,0 +1,31 @@
+@import "../../styles/variables.scss";
+
+.radio {
+  display: flex;
+  align-items: center;
+  gap: $--spacing-xs;
+  cursor: pointer;
+  color: $--color-light;
+  font-size: 14px;
+}
+
+.input {
+  display: none;
+}
+
+.circle {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid $--color-primary;
+  background-color: $--color-bg-card-dark;
+}
+
+.checked {
+  background-color: $--color-primary;
+}
+
+.disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
