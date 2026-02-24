@@ -1,6 +1,7 @@
 "use client";
 
 import styles from "./Header.module.scss"; 
+import Button from "../Button/Button";
 import { useState } from "react";
 
 export default function Header() {
@@ -30,15 +31,25 @@ export default function Header() {
 
       <nav className={styles.containerNav} data-open={isMenuOpen}>
         <ul className={styles.nav}>
-          <li><a className={styles.navLink} href="#">Jeu</a></li>
-          <li><a className={styles.navLink} href="#">Tournois</a></li>
-          <li><a className={styles.navLink} href="#">Communauté</a></li>
-          <li><a className={styles.navLink} href="#">Support</a></li>
+          <li><a className={styles.navLink} href="/jeu">Jeu</a></li>
+          <li><a className={styles.navLink} href="/tournois">Tournois</a></li>
+          <li><a className={styles.navLink} href="/communaute">Communauté</a></li>
+          <li><a className={styles.navLink} href="/support">Support</a></li>
         </ul>
 
         <div className={styles.actions}>
-          <button className={styles.btnConnexion}>Connexion</button>
-          <button className={styles.btnInscription}>Inscription</button>
+           <Button
+                    fullWidth
+                    type="primary"
+                    href="/"
+                    label="Connexion"
+                  />
+          <Button
+                    fullWidth
+                    type="secondary"
+                    href="/"
+                    label="Inscription"
+                  />
         </div>
       </nav>
     </header>

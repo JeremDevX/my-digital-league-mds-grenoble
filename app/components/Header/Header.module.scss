@@ -91,13 +91,13 @@
 }
 
 .nav {
-  display: flex;
-  gap: $--spacing-md;
-  align-items: center;
-  width: auto;
-  margin: 0;
   flex-direction: column;
+  align-items: baseline;
+  gap: 1.6rem;
   width: 100%;
+  margin: 0;
+  margin-left: 62px;
+  display: flex;
 
   @media (min-width: $--tablet) {
     flex-direction: row;
@@ -121,10 +121,11 @@
 .actions {
   display: flex;
   gap: $--spacing-sm;
+  align-items: center;
   flex: 0 0 auto;
   flex-direction: column;
   width: 100%;
-  gap: $--spacing-xs;
+  gap: $--spacing-md;
 
   @media (min-width: $--tablet) {
     flex-direction: row;
