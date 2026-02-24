@@ -31,6 +31,7 @@ Ce dépôt contient une application [Next.js](https://nextjs.org) initialisée a
 
 - En développement : `npm run dev` pour lancer le serveur de développement.
 - En développement : `npm run lint` pour vérifier le style de code avec ESLint.
+- En dévelopement : `npm run storybook` pour lancer Storybook et visualiser les composants.
 - En production : `npm run build` pour construire l'application.
 - En production : `npm start` pour démarrer le serveur en production.
 

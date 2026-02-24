@@ -1,15 +1,62 @@
 @import "../../styles/variables.scss";
 
 .button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $--spacing-sm;
+
   text-align: center;
   border-radius: $--border-radius-sm;
   padding: $--spacing-sm $--spacing-md;
-  background-color: $--color-bg-card-dark;
   color: $--color-light;
   border: 2px solid $--color-primary;
   cursor: pointer;
+  width: fit-content;
 }
 
-.bgFull {
+.button:hover {
+  opacity: 0.9;
+}
+
+.button:disabled {
+  background-color: $--color-disabled;
+  border-color: $--color-disabled;
+  cursor: not-allowed;
+}
+
+.button:disabled:hover {
+  opacity: 1;
+}
+
+.primary {
   background-color: $--color-primary;
+}
+
+.secondary {
+  background-color: transparent;
+}
+
+.primary:not(:disabled):hover,
+.secondary:not(:disabled):hover {
+  background-color: $--color-primary-hover;
+}
+
+.tertiary {
+  background-color: $--color-bg-card-dark;
+  border-color: $--color-bg-card-dark;
+}
+
+.secondary:disabled {
+  background-color: transparent;
+  color: $--color-disabled;
+}
+
+.tertiary:not(:disabled):hover {
+  background-color: $--color-bg-card-dark-hover;
+  border-color: $--color-bg-card-dark-hover;
+}
+
+.fullWidth {
+  width: 100%;
 }

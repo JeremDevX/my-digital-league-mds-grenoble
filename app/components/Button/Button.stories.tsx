@@ -12,28 +12,49 @@ type Story = StoryObj<typeof Button>;
 export const Primary: Story = {
   args: {
     label: "Click Me",
-    bgFull: false,
-    isFullWidth: false,
+    type: "primary",
+    fullWidth: false,
   },
 };
 export const Secondary: Story = {
   args: {
     label: "Click Me",
-    bgFull: true,
-    isFullWidth: false,
+    type: "secondary",
+    fullWidth: false,
+  },
+};
+export const Tertiary: Story = {
+  args: {
+    label: "Click Me",
+    type: "tertiary",
+    fullWidth: false,
   },
 };
 export const FullWidth: Story = {
   args: {
     label: "Click Me",
-    bgFull: false,
-    isFullWidth: true,
+    type: "primary",
+    fullWidth: true,
   },
 };
-export const FullWidthFullBg: Story = {
+export const WithLeftIcon: Story = {
   args: {
     label: "Click Me",
-    bgFull: true,
-    isFullWidth: true,
+    type: "primary",
+    icon: "left",
+  },
+};
+export const WithRightIcon: Story = {
+  args: {
+    label: "Click Me",
+    type: "primary",
+    icon: "right",
+  },
+};
+export const WithBothIcons: Story = {
+  args: {
+    label: "Click Me",
+    type: "primary",
+    icon: "both",
   },
 };

@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
-        <Button bgFull href="/" label="Home" />
+        <Button type="tertiary" href="/" label="Home" disabled />
       </main>
     </div>
   );
