@@ -3,7 +3,7 @@
 .toggleContainer {
   display: flex;
   flex-direction: column;
-  gap: $--spacing-xs; //
+  gap: $--spacing-xs;
 
   &.small {
     --width: 34px;
@@ -59,7 +59,7 @@
   }
 
   &:focus + .slider {
-    box-shadow: 0 0 0 2px $--color-primary-light; //
+    box-shadow: 0 0 0 2px $--color-primary-light;
   }
 }
 
