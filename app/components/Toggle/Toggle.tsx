@@ -20,6 +20,7 @@ const Toggle: React.FC<ToggleProps> = ({
   helperText,
   id
 }) => {
+  // Pour avoir un ID unique pour l'input et le label
   const toggleId = id || `toggle-${label.replace(/\s+/g, '-').toLowerCase()}`;
 
   return (
