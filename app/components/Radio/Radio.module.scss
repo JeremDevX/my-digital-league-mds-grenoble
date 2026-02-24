@@ -1,5 +1,11 @@
 @import "../../styles/variables.scss";
 
+.radioWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: $--spacing-xs;
+}
+
 .radio {
   display: flex;
   align-items: center;
@@ -28,4 +34,11 @@
 .disabled {
   cursor: not-allowed;
   opacity: 0.5;
+}
+
+.helperText {
+  color: $--color-text-dark;
+  font-size: $--font-size-xs;
+  margin-left: calc(16px + $--spacing-xs + 2px);
+  line-height: 1.3;
 }

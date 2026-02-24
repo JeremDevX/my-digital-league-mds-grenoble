@@ -13,6 +13,7 @@ interface RadioProps {
 
 export default function Radio(props: RadioProps) {
     return (
+        <div className={styles.radioWrapper}>
         <label
             className={`${styles.radio} ${props.disabled ? styles.disabled : ""}`}
         >
@@ -32,5 +33,9 @@ export default function Radio(props: RadioProps) {
             />
             {props.label}
         </label>
+            {props.helperText && (
+                <span className={styles.helperText}>{props.helperText}</span>
+            )}
+        </div>
     );
 }
