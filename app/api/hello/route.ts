@@ -1,7 +1,7 @@
-import { prisma } from "@/lib/prisma"
+import { prisma } from "@/lib/prisma";
 
 export async function GET() {
-  const data = await prisma.user.findMany()
+  const data = await prisma.user.findMany();
 
-  return Response.json({ message: 'Hello World', data })
+  return Response.json({ message: "Hello World", data });
 }
