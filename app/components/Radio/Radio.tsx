@@ -14,8 +14,7 @@ interface RadioProps {
 export default function Radio(props: RadioProps) {
     return (
         <div className={styles.radioWrapper}>
-        <label
-            className={`${styles.radio} ${props.disabled ? styles.disabled : ""}`}
+            <label className={styles.radio}
         >
             <input
                 type="radio"
