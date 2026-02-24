@@ -1,0 +1,233 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+.card {
+  background-color: $--color-bg-component-dark;
+  border-radius: $--border-radius-md;
+  padding: $--spacing-md;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid transparent;
+
+  @media (min-width: $--laptop) {
+    max-width: 400px;
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: $--spacing-md;
+  margin-bottom: $--spacing-md;
+}
+
+.iconWrapper {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $--color-bg-dark;
+  border-radius: $--border-radius-xl;
+  color: $--color-icon-dark;
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  @media (min-width: $--tablet) {
+    width: 48px;
+    height: 48px;
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
+
+.title {
+  font-size: $--font-size-md;
+  font-weight: 600;
+  color: $--color-light;
+  margin: 0;
+  line-height: 1.3;
+  flex: 1;
+
+  @media (min-width: $--tablet) {
+    font-size: $--font-size-lg;
+  }
+}
+
+.description {
+  color: $--color-text-dark;
+  font-size: $--font-size-sm;
+  line-height: 1.5;
+  margin: 0 0 $--spacing-lg 0;
+  display: -webkit-box;
+  line-clamp: 2;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.details {
+  display: flex;
+  flex-direction: row;
+  gap: $--spacing-sm;
+  margin-bottom: $--spacing-lg;
+}
+
+.detailRow {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: $--spacing-xs;
+  padding: $--spacing-xs 0;
+
+  @media (min-width: $--tablet) {
+    justify-content: space-between;
+    align-items: left;
+    gap: $--spacing-md;
+  }
+}
+
+.label {
+  font-size: $--font-size-xs;
+  color: $--color-text-dark;
+  font-weight: 500;
+
+  @media (min-width: $--tablet) {
+    font-size: $--font-size-sm;
+  }
+}
+
+.value {
+  font-size: $--font-size-xs;
+  color: $--color-light;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  gap: $--spacing-xs;
+
+  svg {
+    width: 14px;
+    height: 14px;
+    color: $--color-icon-dark;
+  }
+
+  @media (min-width: $--tablet) {
+    font-size: $--font-size-sm;
+  }
+}
+
+.buttonWrapper {
+  margin-top: $--spacing-md;
+}
+
+// Card variants
+.default {
+  @media (min-width: $--tablet) {
+    padding: $--spacing-lg;
+  }
+}
+
+.vedette {
+  display: flex;
+  flex-direction: column;
+  padding: $--spacing-md;
+
+  @media (min-width: $--tablet) {
+    padding: $--spacing-lg;
+  }
+  .metaInfo {
+    color: $--color-light;
+    flex-direction: column;
+    .metaDate {
+      display: flex;
+      flex-direction: row;
+      gap: $--spacing-xs;
+      .metaDebut {
+        font-size: $--font-size-xs;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700;
+        line-height: 1.7;
+      }
+      .metaDurée {
+        font-size: $--font-size-sm;
+        font-family: "Inter", sans-serif;
+        font-weight: 400;
+      }
+    }
+    .metaAnimé {
+      color: $--color-text-dark;
+      font-size: $--font-size-sm;
+      .metaValue {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.compact {
+  padding: $--spacing-sm;
+
+  .iconWrapper {
+    width: 32px;
+    height: 32px;
+
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  .title {
+    font-size: $--font-size-sm;
+  }
+
+  .description {
+    font-size: $--font-size-xs;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    margin-bottom: $--spacing-sm;
+  }
+
+  .details {
+    display: none;
+  }
+
+  .buttonWrapper {
+    display: none;
+  }
+
+  .statusBadge {
+    display: none;
+  }
+
+  @media (min-width: $--tablet) {
+    padding: $--spacing-md;
+
+    .iconWrapper {
+      width: 40px;
+      height: 40px;
+
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    .title {
+      font-size: $--font-size-md;
+    }
+
+    .description {
+      font-size: $--font-size-sm;
+    }
+  }
+}
