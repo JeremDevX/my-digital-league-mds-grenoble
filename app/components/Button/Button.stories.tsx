@@ -1,5 +1,6 @@
 import { Meta, StoryObj } from "@storybook/nextjs-vite";
 import Button from "./Button";
+import { PlusIcon } from "../Icons/Icons";
 
 const meta: Meta<typeof Button> = {
   title: "Components/Button",
@@ -9,6 +10,7 @@ const meta: Meta<typeof Button> = {
 
 export default meta;
 type Story = StoryObj<typeof Button>;
+
 export const Primary: Story = {
   args: {
     label: "Click Me",
@@ -16,6 +18,7 @@ export const Primary: Story = {
     fullWidth: false,
   },
 };
+
 export const Secondary: Story = {
   args: {
     label: "Click Me",
@@ -23,6 +26,7 @@ export const Secondary: Story = {
     fullWidth: false,
   },
 };
+
 export const Tertiary: Story = {
   args: {
     label: "Click Me",
@@ -30,6 +34,7 @@ export const Tertiary: Story = {
     fullWidth: false,
   },
 };
+
 export const FullWidth: Story = {
   args: {
     label: "Click Me",
@@ -37,24 +42,30 @@ export const FullWidth: Story = {
     fullWidth: true,
   },
 };
+
 export const WithLeftIcon: Story = {
   args: {
     label: "Click Me",
     type: "primary",
-    icon: "left",
+    icon: <PlusIcon />,
+    iconPosition: "left",
   },
 };
+
 export const WithRightIcon: Story = {
   args: {
     label: "Click Me",
     type: "primary",
-    icon: "right",
+    icon: <PlusIcon />,
+    iconPosition: "right",
   },
 };
+
 export const WithBothIcons: Story = {
   args: {
     label: "Click Me",
     type: "primary",
-    icon: "both",
+    icon: <PlusIcon />,
+    iconPosition: "both",
   },
 };
