@@ -6,6 +6,8 @@ Issues #
 
 ## Type of Change
 
+<!-- Pour cocher un élément : remplacez [ ] par [x] (sans espace entre les crochets) -->
+
 - [ ] ✨ Feature
 - [ ] 🐛 Bug fix
 - [ ] 📚 Documentation
