@@ -1,4 +1,4 @@
-import { Interface } from "readline";
+import './Input.module.scss';
 
 interface InputProps{
     label?: string;
@@ -13,18 +13,33 @@ interface InputProps{
 }
 
 
+export default function Input({ 
+  label, 
+  placeholder, 
+  value, 
+  onChange, 
+  disabled , 
+  type, 
+  error, 
+  errorMessage,
+  obligatory}: InputProps) {
 
-export default function Input({ label, placeholder, value, onChange, disabled , type, error, errorMessage,obligatory}: InputProps) {
+
   return (
-    <div>
-      {label && <label>{label} {obligatory && <span className="required">*</span>}</label>}
+    <div className="inputContainer">
+      {label && <label className="inputLabel">{label} {obligatory && <span className="required">*</span>}</label>}
       <input
         type={type || "text"}
         placeholder={placeholder}
         value={value}
         onChange={(e) => onChange?.(e.target.value)}
         disabled={disabled}
+        className={`inputField ${error ? 'errorActive' : ''}`}
       />
+
+      {error && errorMessage && (
+        <span className="errorMessage">{errorMessage}</span>
+      )}
     </div>
   );
 }
