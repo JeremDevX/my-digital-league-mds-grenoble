@@ -1,8 +1,8 @@
 // ===== IMPORTS =====
 
-@import "./reset.scss";
-@import "./variables.scss";
-@import "./utilities.scss";
+@use "./reset.scss" as *;
+@use "./variables.scss" as *;
+@use "./mixins.scss" as *;
 
 // ===== GLOBAL STYLES =====
 
