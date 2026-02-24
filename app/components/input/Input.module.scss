@@ -1,25 +1,27 @@
+@import "../../styles/variables.scss";
+
 .inputContainer {
-  margin-bottom: 16px;
+  margin-bottom: $--spacing-md;
   display: flex;
   flex-direction: column;
 }
 
 .inputLabel {
-  margin-bottom: 8px;
+  margin-bottom: $--spacing-sm;
   font-weight: bold;
 }
 
 .inputField {
-  padding: 8px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  font-size: 16px;
+  padding: $--spacing-sm;
+  border-radius: $--border-radius-sm;
+  border: 1px solid $--color-light;
+  font-size: $--font-size-md;
   transition: border-color 0.2s ease-in-out;
 }
 
 .inputField:focus {
   outline: none;
-  border-color: #501EB7;
+  border-color: $--color-primary;
 }
 
 .inputField.errorActive {
@@ -33,6 +35,6 @@
 
 .errorMessage {
   color: #FF5252; 
-  font-size: 16px;
-  margin-top: 8px;
+  font-size: $--font-size-md;
+  margin-top: $--spacing-sm;
 }
