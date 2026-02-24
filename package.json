@@ -1,6 +1,7 @@
 {
   "name": "my-digital-league-mds-grenoble",
   "version": "0.1.0",
+  "type": "module",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -11,7 +12,9 @@
     "build-storybook": "storybook build",
     "prepare": "husky",
     "db:view": "prisma studio --config ./prisma.config.ts",
-    "db:generate": "prisma generate --config ./prisma.config.ts"
+    "db:generate": "prisma generate --config ./prisma.config.ts",
+    "prettier": "prettier --write .",
+    "prettier:check": "prettier --check ."
   },
   "dependencies": {
     "@prisma/adapter-pg": "^7.3.0",
@@ -37,9 +40,11 @@
     "@vitest/coverage-v8": "^4.0.18",
     "eslint": "^9",
     "eslint-config-next": "16.1.6",
+    "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-storybook": "^10.2.1",
     "husky": "^9.1.7",
     "playwright": "^1.58.0",
+    "prettier": "^3.8.1",
     "prisma": "^7.3.0",
     "sass": "^1.97.3",
     "storybook": "^10.2.1",

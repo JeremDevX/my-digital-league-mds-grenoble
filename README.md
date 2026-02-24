@@ -16,6 +16,7 @@ Ce dépôt contient une application [Next.js](https://nextjs.org) initialisée a
 ## Prérequis
 
 - Installer la version de Node.js indiquée dans le fichier `.nvmrc` ou utiliser une version récente :
+
 ```bash
 nvm install
 nvm use
@@ -24,14 +25,21 @@ nvm use
 ## Installation
 
 1. Clonez le dépôt :
-  - `git clone <url-du-depot>`
+
+- `git clone <url-du-depot>`
+
 2. Accédez au dossier du projet :
-  - `cd my-digital-league-mds-grenoble`
+
+- `cd my-digital-league-mds-grenoble`
+
 3. Installez les dépendances :
-  - `npm install`
+
+- `npm install`
+
 4. Copiez le fichier `.env.example` en `.env` et configurez vos variables d'environnement.
-5. Générez le client Prisma : 
-  - `npm run db:generate`
+5. Générez le client Prisma :
+
+- `npm run db:generate`
 
 ## Demarrage
 
