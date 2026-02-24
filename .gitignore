@@ -45,3 +45,5 @@ next-env.d.ts
 storybook-static
 
 /generated/prisma
+
+package-lock.json

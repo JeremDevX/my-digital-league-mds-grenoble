@@ -31,6 +31,7 @@
     "@storybook/addon-docs": "^10.2.1",
     "@storybook/addon-onboarding": "^10.2.1",
     "@storybook/addon-vitest": "^10.2.1",
+    "@storybook/nextjs": "^10.2.1",
     "@storybook/nextjs-vite": "^10.2.1",
     "@types/node": "^20",
     "@types/pg": "^8.16.0",
