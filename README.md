@@ -45,7 +45,7 @@ nvm use
 
 - En développement : `npm run dev` pour lancer le serveur de développement.
 - En développement : `npm run lint` pour vérifier le style de code avec ESLint.
-- En développement : Vous pouvez visualiser la base de données avec Prisma Studio : `npm run db:view`
+- En dévelopement : `npm run storybook` pour lancer Storybook et visualiser les composants.
 - En production : `npm run build` pour construire l'application.
 - En production : `npm start` pour démarrer le serveur en production.
 
