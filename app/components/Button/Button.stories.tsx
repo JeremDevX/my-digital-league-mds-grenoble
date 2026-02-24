@@ -6,6 +6,18 @@ const meta: Meta<typeof Button> = {
   title: "Components/Button",
   component: Button,
   tags: ["autodocs"],
+  argTypes: {
+    icon: {
+      options: ["none", "plus"],
+      mapping: {
+        none: undefined,
+        plus: <PlusIcon />,
+      },
+      control: {
+        type: "radio",
+      },
+    },
+  },
 };
 
 export default meta;
