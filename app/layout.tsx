@@ -1,7 +1,8 @@
+import Providers from "@/app/components/Providers";
 import type { Metadata } from "next";
-import { Montserrat, Inter } from "next/font/google";
-import "./styles/globals.scss";
+import { Inter, Montserrat } from "next/font/google";
 import Header from "./components/Header/Header";
+import "./styles/globals.scss";
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -27,6 +28,7 @@ export default function RootLayout({
     <html lang="fr">
       <body className={`${montserrat.variable} ${interSans.variable}`} suppressHydrationWarning>
         <Header />
+        <Providers>{children}</Providers>
         {children}
       </body>
     </html>

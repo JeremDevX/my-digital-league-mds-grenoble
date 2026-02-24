@@ -13,6 +13,10 @@ Ce dépôt contient une application [Next.js](https://nextjs.org) initialisée a
 - [Conventions de code](#conventions-de-code)
 - [Contribution](#contribution)
 
+## Documentation technique
+
+- [Authentification](docs/authentication.md)
+
 ## Prérequis
 
 - Installer la version de Node.js indiquée dans le fichier `.nvmrc` ou utiliser une version récente :
