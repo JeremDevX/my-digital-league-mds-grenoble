@@ -4,9 +4,13 @@ type IconProps = {
   width?: number;
   height?: number;
   color?: string;
-}
+};
 
-export const ArrowCircleRightIcon = ({ width = 20, height = 20, color = "black" }: IconProps): ReactNode => (
+export const ArrowCircleRightIcon = ({
+  width = 20,
+  height = 20,
+  color = "black",
+}: IconProps): ReactNode => (
   <svg
     width={width}
     height={height}
@@ -28,8 +32,11 @@ export const ArrowCircleRightIcon = ({ width = 20, height = 20, color = "black" 
   </svg>
 );
 
-
-export const MessageSquareIcon = ({ width = 20, height = 20, color = "black" }: IconProps): ReactNode => (
+export const MessageSquareIcon = ({
+  width = 20,
+  height = 20,
+  color = "black",
+}: IconProps): ReactNode => (
   <svg
     width={width}
     height={height}
@@ -47,7 +54,11 @@ export const MessageSquareIcon = ({ width = 20, height = 20, color = "black" }: 
   </svg>
 );
 
-export const PlusIcon = ({ width = 20, height = 20, color = "black" }: IconProps): ReactNode => (
+export const PlusIcon = ({
+  width = 20,
+  height = 20,
+  color = "black",
+}: IconProps): ReactNode => (
   <svg
     width={width}
     height={height}
@@ -62,7 +73,11 @@ export const PlusIcon = ({ width = 20, height = 20, color = "black" }: IconProps
   </svg>
 );
 
-export const GroupIcon = ({ width = 32, height = 20, color = "black" }: IconProps): ReactNode => (
+export const GroupIcon = ({
+  width = 32,
+  height = 20,
+  color = "black",
+}: IconProps): ReactNode => (
   <svg
     width={width}
     height={height}
@@ -77,8 +92,11 @@ export const GroupIcon = ({ width = 32, height = 20, color = "black" }: IconProp
   </svg>
 );
 
-
-export const LightbulbIcon = ({ width = 20, height = 20, color = "black" }: IconProps): ReactNode => (
+export const LightbulbIcon = ({
+  width = 20,
+  height = 20,
+  color = "black",
+}: IconProps): ReactNode => (
   <svg
     width={width}
     height={height}
@@ -93,7 +111,11 @@ export const LightbulbIcon = ({ width = 20, height = 20, color = "black" }: Icon
   </svg>
 );
 
-export const DiscordIcon = ({ width = 24, height = 24, color = "black" }): ReactNode => (
+export const DiscordIcon = ({
+  width = 24,
+  height = 24,
+  color = "black",
+}): ReactNode => (
   <svg
     width={width}
     height={height}
@@ -108,7 +130,11 @@ export const DiscordIcon = ({ width = 24, height = 24, color = "black" }): React
   </svg>
 );
 
-export const InstagramIcon = ({ width = 24, height = 23, color = "black" }): ReactNode => (
+export const InstagramIcon = ({
+  width = 24,
+  height = 23,
+  color = "black",
+}): ReactNode => (
   <svg
     width={width}
     height={height}
@@ -129,21 +155,22 @@ export const InstagramIcon = ({ width = 24, height = 23, color = "black" }): Rea
         stroke={color}
         stroke-width="2"
         stroke-linecap="round"
-        stroke-linejoin="round"/>
+        stroke-linejoin="round"
+      />
     </g>
     <defs>
       <clipPath id="clip0_2839_648">
-        <rect
-          width={width}
-          height={height}
-          fill={color}
-        />
+        <rect width={width} height={height} fill={color} />
       </clipPath>
     </defs>
   </svg>
 );
 
-export const EnvelopIcon = ({ width = 24, height = 23, color = "black" }): ReactNode => (
+export const EnvelopIcon = ({
+  width = 24,
+  height = 23,
+  color = "black",
+}): ReactNode => (
   <svg
     width={width}
     height={height}
@@ -152,7 +179,8 @@ export const EnvelopIcon = ({ width = 24, height = 23, color = "black" }): React
     xmlns="http://www.w3.org/2000/svg"
   >
     <g clip-path="url(#clip0_2839_652)">
-      <path d="M19 4.79175H5C3.89543 4.79175 3 5.64987 3 6.70841V16.2917C3 17.3503 3.89543 18.2084 5 18.2084H19C20.1046 18.2084 21 17.3503 21 16.2917V6.70841C21 5.64987 20.1046 4.79175 19 4.79175Z"
+      <path
+        d="M19 4.79175H5C3.89543 4.79175 3 5.64987 3 6.70841V16.2917C3 17.3503 3.89543 18.2084 5 18.2084H19C20.1046 18.2084 21 17.3503 21 16.2917V6.70841C21 5.64987 20.1046 4.79175 19 4.79175Z"
         stroke={color}
         stroke-width="2"
         stroke-linecap="round"
@@ -168,17 +196,17 @@ export const EnvelopIcon = ({ width = 24, height = 23, color = "black" }): React
     </g>
     <defs>
       <clipPath id="clip0_2839_652">
-        <rect
-          width={width}
-          height={height}
-          fill={color}
-        />
+        <rect width={width} height={height} fill={color} />
       </clipPath>
     </defs>
   </svg>
 );
 
-export const ChevronRightIcon = ({ width = 20, height = 16, color = "black" }): ReactNode => (
+export const ChevronRightIcon = ({
+  width = 20,
+  height = 16,
+  color = "black",
+}): ReactNode => (
   <svg
     width={width}
     height={height}
@@ -196,8 +224,11 @@ export const ChevronRightIcon = ({ width = 20, height = 16, color = "black" }): 
   </svg>
 );
 
-
-export const ChevronLeftIcon = ({ width = 20, height = 16, color = "black" }): ReactNode => (
+export const ChevronLeftIcon = ({
+  width = 20,
+  height = 16,
+  color = "black",
+}): ReactNode => (
   <svg
     width={width}
     height={height}
@@ -205,21 +236,25 @@ export const ChevronLeftIcon = ({ width = 20, height = 16, color = "black" }): R
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-  <path
-    d="M4.7298 8.94256L0.861518 5.14467C0.826609 5.11043 0.798795 5.06967 0.779657 5.02471C0.760518 4.9797 0.750437 4.93138 0.749988 4.88252C0.749539 4.83366 0.758732 4.78516 0.777041 4.73981C0.79535 4.6945 0.822411 4.65324 0.856686 4.61837L4.65458 0.750084"
-    fill="none"
-  />
-  <path
-    d="M4.7298 8.94256L0.861518 5.14467C0.826609 5.11043 0.798795 5.06967 0.779657 5.02471C0.760518 4.9797 0.750437 4.93138 0.749988 4.88252C0.749539 4.83366 0.758732 4.78516 0.777041 4.73981C0.79535 4.6945 0.822411 4.65324 0.856686 4.61837L4.65458 0.750085"
-    stroke={color}
-    stroke-width="1.5"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-  />
+    <path
+      d="M4.7298 8.94256L0.861518 5.14467C0.826609 5.11043 0.798795 5.06967 0.779657 5.02471C0.760518 4.9797 0.750437 4.93138 0.749988 4.88252C0.749539 4.83366 0.758732 4.78516 0.777041 4.73981C0.79535 4.6945 0.822411 4.65324 0.856686 4.61837L4.65458 0.750084"
+      fill="none"
+    />
+    <path
+      d="M4.7298 8.94256L0.861518 5.14467C0.826609 5.11043 0.798795 5.06967 0.779657 5.02471C0.760518 4.9797 0.750437 4.93138 0.749988 4.88252C0.749539 4.83366 0.758732 4.78516 0.777041 4.73981C0.79535 4.6945 0.822411 4.65324 0.856686 4.61837L4.65458 0.750085"
+      stroke={color}
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
   </svg>
 );
 
-export const ChevronDownIcon = ({ width = 14, height = 8, color = "black" }): ReactNode => (
+export const ChevronDownIcon = ({
+  width = 14,
+  height = 8,
+  color = "black",
+}): ReactNode => (
   <svg
     width={width}
     height={height}
@@ -229,12 +264,16 @@ export const ChevronDownIcon = ({ width = 14, height = 8, color = "black" }): Re
   >
     <path
       d="M12.8558 0L14 1.1898L7.76423 7.67036C7.66431 7.77483 7.54549 7.85773 7.41461 7.9143C7.28373 7.97088 7.14337 8 7.00162 8C6.85986 8 6.71951 7.97088 6.58863 7.9143C6.45775 7.85773 6.33893 7.77483 6.23901 7.67036L0 1.1898L1.14418 0.00112152L7 6.08359L12.8558 0Z"
-      fill="#8F8F8F"
+      fill={color}
     />
   </svg>
-)
+);
 
-export const CupIcon = ({ width = 24, height = 24, color = "black" }): ReactNode => (
+export const CupIcon = ({
+  width = 24,
+  height = 24,
+  color = "black",
+}): ReactNode => (
   <svg
     width={width}
     height={height}
@@ -249,7 +288,11 @@ export const CupIcon = ({ width = 24, height = 24, color = "black" }): ReactNode
   </svg>
 );
 
-export const PodiumIcon = ({ width = 24, height = 40, color = "black" }): ReactNode => (
+export const PodiumIcon = ({
+  width = 24,
+  height = 40,
+  color = "black",
+}): ReactNode => (
   <svg
     width={width}
     height={height}
@@ -264,7 +307,11 @@ export const PodiumIcon = ({ width = 24, height = 40, color = "black" }): ReactN
   </svg>
 );
 
-export const RocketIcon = ({ width = 20, height = 20, color = "black" }): ReactNode => (
+export const RocketIcon = ({
+  width = 20,
+  height = 20,
+  color = "black",
+}): ReactNode => (
   <svg
     width={width}
     height={height}
@@ -280,17 +327,17 @@ export const RocketIcon = ({ width = 20, height = 20, color = "black" }): ReactN
     </g>
     <defs>
       <clipPath id="clip0_2022_4262">
-        <rect
-          width={width}
-          height={height}
-          fill={color}
-        />
+        <rect width={width} height={height} fill={color} />
       </clipPath>
     </defs>
   </svg>
 );
 
-export const GamepadIcon = ({ width = 23, height = 17, color = "black" }): ReactNode => (
+export const GamepadIcon = ({
+  width = 23,
+  height = 17,
+  color = "black",
+}): ReactNode => (
   <svg
     width={width}
     height={height}
@@ -303,9 +350,13 @@ export const GamepadIcon = ({ width = 23, height = 17, color = "black" }): React
       fill={color}
     />
   </svg>
-)
+);
 
-export const CalendarIcon = ({ width = 30, height = 30, color = "black" }): ReactNode => (
+export const CalendarIcon = ({
+  width = 30,
+  height = 30,
+  color = "black",
+}): ReactNode => (
   <svg
     width={width}
     height={height}
@@ -313,20 +364,19 @@ export const CalendarIcon = ({ width = 30, height = 30, color = "black" }): Reac
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <rect
-      width="18.77"
-      height="18.77"
-      rx="9.385"
-      fill="none"
-    />
+    <rect width="18.77" height="18.77" rx="9.385" fill="none" />
     <path
       d="M13 14H6C5.44772 14 5 13.5971 5 13.1V6.8C5 6.30294 5.44772 5.9 6 5.9H7V5H8V5.9H11V5H12V5.9H13C13.5523 5.9 14 6.30294 14 6.8V13.1C14 13.5971 13.5523 14 13 14ZM6 8.6V13.1H13V8.6H6ZM6 6.8V7.7H13V6.8H6Z"
       fill={color}
     />
   </svg>
-)
+);
 
-export const LocationIcon = ({ width = 30, height = 30, color = "black" }): ReactNode => (
+export const LocationIcon = ({
+  width = 30,
+  height = 30,
+  color = "black",
+}): ReactNode => (
   <svg
     width={width}
     height={height}
@@ -334,20 +384,19 @@ export const LocationIcon = ({ width = 30, height = 30, color = "black" }): Reac
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <rect
-      width="18.77"
-      height="18.77"
-      rx="9.385"
-      fill="none"
-    />
+    <rect width="18.77" height="18.77" rx="9.385" fill="none" />
     <path
       d="M9.5 15C9.5 15 5 11.7 5 8.4C5 5.65 7.25 4 9.5 4C11.75 4 14 5.65 14 8.4C14 11.7 9.5 15 9.5 15ZM9.5 10.05C10.4321 10.05 11.1875 9.31135 11.1875 8.4C11.1875 7.48865 10.4321 6.75 9.5 6.75C8.56794 6.75 7.8125 7.48865 7.8125 8.4C7.8125 9.31135 8.56794 10.05 9.5 10.05Z"
       fill={color}
     />
   </svg>
-)
+);
 
-export const TeamIcon = ({ width = 25, height = 25, color = "black" }): ReactNode => (
+export const TeamIcon = ({
+  width = 25,
+  height = 25,
+  color = "black",
+}): ReactNode => (
   <svg
     width={width}
     height={height}
@@ -360,9 +409,13 @@ export const TeamIcon = ({ width = 25, height = 25, color = "black" }): ReactNod
       fill={color}
     />
   </svg>
-)
+);
 
-export const DiscoveryIcon = ({ width = 25, height = 25, color = "black" }): ReactNode => (
+export const DiscoveryIcon = ({
+  width = 25,
+  height = 25,
+  color = "black",
+}): ReactNode => (
   <svg
     width={width}
     height={height}
@@ -375,9 +428,13 @@ export const DiscoveryIcon = ({ width = 25, height = 25, color = "black" }): Rea
       fill={color}
     />
   </svg>
-)
+);
 
-export const CircleQuestionIcon = ({ width = 25, height = 25, color = "black" }): ReactNode => (
+export const CircleQuestionIcon = ({
+  width = 25,
+  height = 25,
+  color = "black",
+}): ReactNode => (
   <svg
     width={width}
     height={height}
@@ -393,17 +450,17 @@ export const CircleQuestionIcon = ({ width = 25, height = 25, color = "black" })
     </g>
     <defs>
       <clipPath id="clip0_2022_1659">
-        <rect
-          width={width}
-          height={height}
-          fill={color}
-        />
+        <rect width={width} height={height} fill={color} />
       </clipPath>
     </defs>
   </svg>
-)
+);
 
-export const CheckIcon = ({ width = 25, height = 25, color = "black" }): ReactNode => (
+export const CheckIcon = ({
+  width = 25,
+  height = 25,
+  color = "black",
+}): ReactNode => (
   <svg
     width={width}
     height={height}
@@ -419,9 +476,13 @@ export const CheckIcon = ({ width = 25, height = 25, color = "black" }): ReactNo
       stroke-linejoin="round"
     />
   </svg>
-)
+);
 
-export const ExternalLinkIcon = ({ width = 25, height = 25, color = "black" }): ReactNode => (
+export const ExternalLinkIcon = ({
+  width = 25,
+  height = 25,
+  color = "black",
+}): ReactNode => (
   <svg
     width={width}
     height={height}
@@ -454,17 +515,17 @@ export const ExternalLinkIcon = ({ width = 25, height = 25, color = "black" }): 
     </g>
     <defs>
       <clipPath id="clip0_2022_1915">
-        <rect
-          width="22"
-          height="22"
-          fill={color}
-        />
+        <rect width="22" height="22" fill={color} />
       </clipPath>
     </defs>
   </svg>
-)
+);
 
-export const ClockIcon = ({ width = 50, height = 50, color = "black" }): ReactNode => (
+export const ClockIcon = ({
+  width = 50,
+  height = 50,
+  color = "black",
+}): ReactNode => (
   <svg
     width={width}
     height={height}
@@ -472,32 +533,31 @@ export const ClockIcon = ({ width = 50, height = 50, color = "black" }): ReactNo
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-  <rect
-    width={width}
-    height={height}
-    rx="20"
-    fill="none"
-  />
-  <g clip-path="url(#clip0_2022_1974)">
-    <path
-      d="M25.415 15C28.1772 15 30.8263 16.0973 32.7795 18.0505C34.7327 20.0037 35.83 22.6528 35.83 25.415C35.83 28.1772 34.7327 30.8263 32.7795 32.7795C30.8263 34.7327 28.1772 35.83 25.415 35.83C22.6528 35.83 20.0037 34.7327 18.0505 32.7795C16.0973 30.8263 15 28.1772 15 25.415C15 22.6528 16.0973 20.0037 18.0505 18.0505C20.0037 16.0973 22.6528 15 25.415 15ZM24.4386 19.882V25.415C24.4386 25.9561 24.8739 26.3914 25.415 26.3914H29.6461C30.1872 26.3914 30.6225 25.9561 30.6225 25.415C30.6225 24.8739 30.1872 24.4386 29.6461 24.4386H26.3914V19.882C26.3914 19.3409 25.9561 18.9056 25.415 18.9056C24.8739 18.9056 24.4386 19.3409 24.4386 19.882Z"
-      fill={color}
-    />
-  </g>
-  <defs>
-    <clipPath id="clip0_2022_1974">
-      <rect
-        width={width}
-        height={height}
+    <rect width={width} height={height} rx="20" fill="none" />
+    <g clip-path="url(#clip0_2022_1974)">
+      <path
+        d="M25.415 15C28.1772 15 30.8263 16.0973 32.7795 18.0505C34.7327 20.0037 35.83 22.6528 35.83 25.415C35.83 28.1772 34.7327 30.8263 32.7795 32.7795C30.8263 34.7327 28.1772 35.83 25.415 35.83C22.6528 35.83 20.0037 34.7327 18.0505 32.7795C16.0973 30.8263 15 28.1772 15 25.415C15 22.6528 16.0973 20.0037 18.0505 18.0505C20.0037 16.0973 22.6528 15 25.415 15ZM24.4386 19.882V25.415C24.4386 25.9561 24.8739 26.3914 25.415 26.3914H29.6461C30.1872 26.3914 30.6225 25.9561 30.6225 25.415C30.6225 24.8739 30.1872 24.4386 29.6461 24.4386H26.3914V19.882C26.3914 19.3409 25.9561 18.9056 25.415 18.9056C24.8739 18.9056 24.4386 19.3409 24.4386 19.882Z"
         fill={color}
-        transform="translate(15 15)"
       />
-    </clipPath>
-  </defs>
+    </g>
+    <defs>
+      <clipPath id="clip0_2022_1974">
+        <rect
+          width={width}
+          height={height}
+          fill={color}
+          transform="translate(15 15)"
+        />
+      </clipPath>
+    </defs>
   </svg>
-)
+);
 
-export const CalendarTodayIcon = ({ width = 30, height = 30, color = "black" }): ReactNode => (
+export const CalendarTodayIcon = ({
+  width = 30,
+  height = 30,
+  color = "black",
+}): ReactNode => (
   <svg
     width={width}
     height={height}
@@ -510,9 +570,13 @@ export const CalendarTodayIcon = ({ width = 30, height = 30, color = "black" }):
       fill={color}
     />
   </svg>
-)
+);
 
-export const MegaphoneIcon = ({ width = 30, height = 27, color = "black" }): ReactNode => (
+export const MegaphoneIcon = ({
+  width = 30,
+  height = 27,
+  color = "black",
+}): ReactNode => (
   <svg
     width={width}
     height={height}
@@ -525,9 +589,13 @@ export const MegaphoneIcon = ({ width = 30, height = 27, color = "black" }): Rea
       fill={color}
     />
   </svg>
-)
+);
 
-export const DiceIcon = ({ width = 30, height = 30, color = "black" }): ReactNode => (
+export const DiceIcon = ({
+  width = 30,
+  height = 30,
+  color = "black",
+}): ReactNode => (
   <svg
     width={width}
     height={height}
@@ -540,9 +608,13 @@ export const DiceIcon = ({ width = 30, height = 30, color = "black" }): ReactNod
       fill={color}
     />
   </svg>
-)
+);
 
-export const JoystickIcon = ({ width = 28, height = 30, color = "black" }): ReactNode => (
+export const JoystickIcon = ({
+  width = 28,
+  height = 30,
+  color = "black",
+}): ReactNode => (
   <svg
     width={width}
     height={height}
@@ -555,9 +627,13 @@ export const JoystickIcon = ({ width = 28, height = 30, color = "black" }): Reac
       fill={color}
     />
   </svg>
-)
+);
 
-export const BoltIcon = ({ width = 20, height = 30, color = "black" }): ReactNode => (
+export const BoltIcon = ({
+  width = 20,
+  height = 30,
+  color = "black",
+}): ReactNode => (
   <svg
     width={width}
     height={height}
@@ -573,16 +649,17 @@ export const BoltIcon = ({ width = 20, height = 30, color = "black" }): ReactNod
     </g>
     <defs>
       <clipPath id="clip0_2022_2028">
-        <rect
-          width="20"
-          height="30"
-          fill={color}/>
+        <rect width="20" height="30" fill={color} />
       </clipPath>
     </defs>
   </svg>
-)
+);
 
-export const AlienIcon = ({ width = 38, height = 27, color = "black" }): ReactNode => (
+export const AlienIcon = ({
+  width = 38,
+  height = 27,
+  color = "black",
+}): ReactNode => (
   <svg
     width={width}
     height={height}
@@ -595,9 +672,13 @@ export const AlienIcon = ({ width = 38, height = 27, color = "black" }): ReactNo
       fill={color}
     />
   </svg>
-)
+);
 
-export const BullseyArrowIcon = ({ width = 31, height = 30, color = "black" }): ReactNode => (
+export const BullseyArrowIcon = ({
+  width = 31,
+  height = 30,
+  color = "black",
+}): ReactNode => (
   <svg
     width={width}
     height={height}
@@ -610,9 +691,13 @@ export const BullseyArrowIcon = ({ width = 31, height = 30, color = "black" }): 
       fill={color}
     />
   </svg>
-)
+);
 
-export const FilterIcon = ({ width = 25, height = 25, color = "black" }): ReactNode => (
+export const FilterIcon = ({
+  width = 25,
+  height = 25,
+  color = "black",
+}): ReactNode => (
   <svg
     width={width}
     height={height}
@@ -625,9 +710,13 @@ export const FilterIcon = ({ width = 25, height = 25, color = "black" }): ReactN
       fill={color}
     />
   </svg>
-)
+);
 
-export const LinkIcon = ({ width = 25, height = 25, color = "black" }): ReactNode => (
+export const LinkIcon = ({
+  width = 25,
+  height = 25,
+  color = "black",
+}): ReactNode => (
   <svg
     width={width}
     height={height}
@@ -635,19 +724,19 @@ export const LinkIcon = ({ width = 25, height = 25, color = "black" }): ReactNod
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-  <path
-    d="M10.3195 3.49334L11.5025 2.31034C11.9174 1.89506 12.41 1.56559 12.9523 1.34076C13.4946 1.11593 14.0758 1.00014 14.6628 1C15.2498 0.999863 15.8311 1.11539 16.3735 1.33996C16.9159 1.56454 17.4087 1.89378 17.8237 2.30887C18.2388 2.72395 18.5681 3.21675 18.7926 3.75911C19.0172 4.30148 19.1327 4.88277 19.1326 5.46979C19.1325 6.05681 19.0167 6.63805 18.7918 7.18031C18.567 7.72257 18.2375 8.21521 17.8223 8.6301L14.9496 11.5027C14.5347 11.9177 14.0421 12.2469 13.4999 12.4714C12.9577 12.696 12.3766 12.8116 11.7898 12.8116C11.2029 12.8116 10.6218 12.696 10.0796 12.4714C9.53748 12.2469 9.04484 11.9177 8.62988 11.5027"
-    stroke={color}
-    stroke-width="2"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-  />
-  <path
-    d="M9.81292 16.6397L8.6301 17.8225C8.21521 18.2378 7.72256 18.5672 7.18031 18.7921C6.63805 19.0169 6.05681 19.1327 5.46979 19.1328C4.88277 19.133 4.30148 19.0174 3.75911 18.7929C3.21675 18.5683 2.72395 18.239 2.30887 17.824C1.89378 17.4089 1.56454 16.9161 1.33996 16.3737C1.11539 15.8313 0.999863 15.2501 1 14.663C1.00014 14.076 1.11593 13.4948 1.34076 12.9525C1.56559 12.4103 1.89506 11.9176 2.31034 11.5027L5.18296 8.63009C5.59792 8.21513 6.09055 7.88597 6.63273 7.66139C7.1749 7.43682 7.756 7.32123 8.34284 7.32123C8.92969 7.32123 9.51079 7.43682 10.053 7.66139C10.5951 7.88597 11.0878 8.21513 11.5027 8.63009"
-    stroke={color}
-    stroke-width="2"
-    stroke-linecap="round"
-    troke-linejoin="round"
-  />
+    <path
+      d="M10.3195 3.49334L11.5025 2.31034C11.9174 1.89506 12.41 1.56559 12.9523 1.34076C13.4946 1.11593 14.0758 1.00014 14.6628 1C15.2498 0.999863 15.8311 1.11539 16.3735 1.33996C16.9159 1.56454 17.4087 1.89378 17.8237 2.30887C18.2388 2.72395 18.5681 3.21675 18.7926 3.75911C19.0172 4.30148 19.1327 4.88277 19.1326 5.46979C19.1325 6.05681 19.0167 6.63805 18.7918 7.18031C18.567 7.72257 18.2375 8.21521 17.8223 8.6301L14.9496 11.5027C14.5347 11.9177 14.0421 12.2469 13.4999 12.4714C12.9577 12.696 12.3766 12.8116 11.7898 12.8116C11.2029 12.8116 10.6218 12.696 10.0796 12.4714C9.53748 12.2469 9.04484 11.9177 8.62988 11.5027"
+      stroke={color}
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M9.81292 16.6397L8.6301 17.8225C8.21521 18.2378 7.72256 18.5672 7.18031 18.7921C6.63805 19.0169 6.05681 19.1327 5.46979 19.1328C4.88277 19.133 4.30148 19.0174 3.75911 18.7929C3.21675 18.5683 2.72395 18.239 2.30887 17.824C1.89378 17.4089 1.56454 16.9161 1.33996 16.3737C1.11539 15.8313 0.999863 15.2501 1 14.663C1.00014 14.076 1.11593 13.4948 1.34076 12.9525C1.56559 12.4103 1.89506 11.9176 2.31034 11.5027L5.18296 8.63009C5.59792 8.21513 6.09055 7.88597 6.63273 7.66139C7.1749 7.43682 7.756 7.32123 8.34284 7.32123C8.92969 7.32123 9.51079 7.43682 10.053 7.66139C10.5951 7.88597 11.0878 8.21513 11.5027 8.63009"
+      stroke={color}
+      stroke-width="2"
+      stroke-linecap="round"
+      troke-linejoin="round"
+    />
   </svg>
-)
+);
