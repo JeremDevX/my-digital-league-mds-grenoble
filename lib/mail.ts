@@ -25,8 +25,8 @@ export const sendVerificationEmail = async (
   await transport.sendMail({
     from: sender,
     to: email,
-    subject: "Confirm your email",
-    html: `<p>Click <a href="${confirmLink}">here</a> to confirm email.</p>`,
+    subject: "Confirmez votre adresse e-mail",
+    html: `<p>Cliquez <a href="${confirmLink}">ici</a> pour confirmer votre adresse e-mail.</p>`,
   });
 };
 
@@ -39,7 +39,7 @@ export const sendPasswordResetEmail = async (
   await transport.sendMail({
     from: sender,
     to: email,
-    subject: "Reset your password",
-    html: `<p>Click <a href="${resetLink}">here</a> to reset password.</p>`,
+    subject: "Réinitialisation de votre mot de passe",
+    html: `<p>Cliquez <a href="${resetLink}">ici</a> pour réinitialiser votre mot de passe.</p>`,
   });
 };
