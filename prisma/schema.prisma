@@ -1,0 +1,99 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum Level {
+  MOLDU
+  BEGINNER
+  INTERMEDIATE
+  ADVANCED
+  EXPERT
+}
+
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  password  String
+  isOrga Boolean  @default(false)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  participations Participant[]
+  adminEvents    Event[] @relation("EventAdmins")
+}
+
+model Game {
+  id        String   @id @default(cuid())
+  title     String
+  description String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  events Event[]
+}
+
+model Event {
+  id        String   @id @default(cuid())
+  name      String
+  date      DateTime
+  inscriptionDeadline DateTime
+  rules     String
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  game      Game     @relation(fields: [gameId], references: [id])
+  gameId    String
+  participants Participant[]
+  admins       User[] @relation("EventAdmins")
+}
+
+model Participant {
+  id        String   @id @default(cuid())
+  pseudo    String
+  avatarUrl String?
+  killingSentence String?
+  level     Level?
+
+  user      User     @relation(fields: [userId], references: [id])
+  userId    String
+  event     Event    @relation(fields: [eventId], references: [id])
+  eventId   String
+
+  registeredAt DateTime @default(now())
+  results   Result[]
+}
+
+model FileResult {
+  id       String   @id @default(cuid())
+  url      String
+
+  resultId String
+  result   Result @relation(fields: [resultId], references: [id])
+
+  createdAt DateTime @default(now())
+}
+
+model Result {
+  id        String   @id @default(cuid())
+  score     Int?
+  comment   String?
+  files    FileResult[]
+
+  participantId String
+  participant Participant @relation(fields: [participantId], references: [id])
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
