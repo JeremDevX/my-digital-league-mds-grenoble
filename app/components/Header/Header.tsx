@@ -11,7 +11,7 @@ export default function Header() {
   };
 
   return (
-    <header>
+    <header className={styles.header}>
       <div className={styles.containerLogo}>
         <img className={styles.logo} src="/logo.svg" alt="Logo" width={150} height={40} />
       </div>
@@ -28,16 +28,17 @@ export default function Header() {
         <span className={isMenuOpen ? styles.buttonOpen : styles.buttonOpen}></span>
       </button>
 
-      <nav data-open={isMenuOpen}>
-        <ul>
-          <li><a href="#">Accueil</a></li>
-          <li><a href="#">À propos</a></li>
-          <li><a href="#">Contact</a></li>
+      <nav className={styles.containerNav} data-open={isMenuOpen}>
+        <ul className={styles.nav}>
+          <li><a className={styles.navLink} href="#">Jeu</a></li>
+          <li><a className={styles.navLink} href="#">Tournois</a></li>
+          <li><a className={styles.navLink} href="#">Communauté</a></li>
+          <li><a className={styles.navLink} href="#">Support</a></li>
         </ul>
 
-        <div>
-          // TODO: Button component
-          // TODO: Button component
+        <div className={styles.actions}>
+          <button className={styles.btnConnexion}>Connexion</button>
+          <button className={styles.btnInscription}>Inscription</button>
         </div>
       </nav>
     </header>
