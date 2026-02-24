@@ -41,13 +41,13 @@ export default function Header() {
            <Button
                     fullWidth
                     type="primary"
-                    href="/"
+                    href="/auth/login"
                     label="Connexion"
                   />
           <Button
                     fullWidth
                     type="secondary"
-                    href="/"
+                    href="/auth/register"
                     label="Inscription"
                   />
         </div>
