@@ -1,8 +1,8 @@
 // ===== IMPORTS =====
 
-@use "./reset.scss" as *;
-@use "./variables.scss" as *;
-@use "./mixins.scss" as *;
+@import "./reset.scss";
+@import "./variables.scss";
+@import "./mixins.scss";
 
 // ===== GLOBAL STYLES =====
 
@@ -14,19 +14,25 @@ html {
 
 body {
   font-size: 1.6rem;
+  font-family: var(--font-inter), sans-serif;
   line-height: 1.5;
+  background-color: $--color-bg-card-dark;
+  padding-inline: clamp(0rem, 8vw, 15rem);
 }
 
 h1 {
   font-size: 3.2rem;
   font-weight: 700;
+  font-family: var(--font-montserrat), sans-serif;
 }
 
 h2 {
   font-size: 2.4rem;
   font-weight: 600;
+  font-family: var(--font-montserrat), sans-serif;
 }
 h3 {
   font-size: 2rem;
   font-weight: 500;
+  font-family: var(--font-montserrat), sans-serif;
 }

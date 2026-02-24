@@ -1,5 +1,7 @@
 // ===== MIXINS =====
 
+@import "./variables.scss";
+
 @mixin flex-row-to-column {
   display: flex;
   flex-direction: row;
