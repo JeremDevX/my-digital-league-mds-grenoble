@@ -6,7 +6,9 @@
   background-color: $--color-bg-card-dark;
   border-radius: $--border-radius-md;
   padding: $--spacing-xl;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
   margin: 0 auto;
   color: $--color-light;
 }
@@ -44,13 +46,34 @@
     display: flex;
     flex-direction: column;
     gap: $--spacing-xs;
+    width: 100%;
+
+    & > div {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    :global(.errorMessage) {
+      color: #ef4444;
+      font-size: $--font-size-xs;
+      margin-top: $--spacing-xs;
+      display: block;
+    }
+
+    :global(.errorActive) {
+      border-color: #ef4444;
+    }
 
     label {
       font-size: $--font-size-sm;
       font-weight: 500;
+      display: block;
+      margin-bottom: 4px;
     }
 
     input {
+      width: 100%;
       background-color: $--color-bg-dark;
       border: 1px solid transparent;
       border-radius: $--border-radius-sm;
@@ -63,13 +86,12 @@
       &:focus {
         border-color: $--color-primary;
       }
-      
+
       &:disabled {
         opacity: 0.5;
         cursor: not-allowed;
       }
     }
-
     .error {
       color: #ef4444;
       font-size: $--font-size-xs;
@@ -81,7 +103,7 @@
     color: $--color-primary;
     text-decoration: none;
     align-self: flex-end;
-    
+
     &:hover {
       text-decoration: underline;
     }
@@ -112,12 +134,12 @@
 .footer {
   margin-top: $--spacing-lg;
   text-align: center;
-  
+
   a {
     color: $--color-text-dark;
     font-size: $--font-size-sm;
     text-decoration: none;
-    
+
     &:hover {
       color: $--color-light;
       text-decoration: underline;
