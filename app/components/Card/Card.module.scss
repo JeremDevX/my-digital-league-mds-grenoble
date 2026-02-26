@@ -194,13 +194,13 @@
       gap: $--spacing-xs;
       .metaDebut {
         font-size: $--font-size-xs;
-        font-family: "Montserrat", sans-serif;
+        font-family: $--font-family-montserrat;
         font-weight: 700;
         line-height: 1.7;
       }
       .metaDurée {
         font-size: $--font-size-sm;
-        font-family: "Inter", sans-serif;
+        font-family: $--font-family-inter;
         font-weight: 400;
       }
     }
