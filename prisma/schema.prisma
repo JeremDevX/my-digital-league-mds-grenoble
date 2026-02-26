@@ -114,6 +114,9 @@ model Participant {
 
   registeredAt DateTime @default(now())
   results   Result[]
+
+  @@unique([userId, eventId])
+  @@unique([pseudo, eventId])
 }
 
 model FileResult {
