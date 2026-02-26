@@ -9,6 +9,7 @@
 .inputLabel {
   margin-bottom: $--spacing-sm;
   font-weight: bold;
+  color: $--color-light;
 }
 
 .inputField {
@@ -25,16 +26,16 @@
 }
 
 .inputField.errorActive {
-  border-color: #FF5252; 
+  border-color: #ff5252;
 }
 
 .inputField.errorActive:focus {
   outline: none;
-  border-color: #FF5252;
+  border-color: #ff5252;
 }
 
 .errorMessage {
-  color: #FF5252; 
+  color: #ff5252;
   font-size: $--font-size-md;
   margin-top: $--spacing-sm;
 }
