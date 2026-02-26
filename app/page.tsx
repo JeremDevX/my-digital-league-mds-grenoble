@@ -1,43 +1,41 @@
 "use client";
 
-import styles from "./page.module.scss";
 import Card from "./components/Card/Card";
-import { MessageSquareIcon } from "./components/Icons/Icons";
+import { BulbIcon } from "./components/Icons/Icons";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-
+    <div>
+      <main>
         <section style={{ marginBottom: "3rem" }}>
-          <h2>Card Standard (Default)</h2>
-          
-            <Card 
-              id="1"
-              variant="default"
-              status="ongoing"
-              icon={<MessageSquareIcon />}
-              name="Rocket League – Aerial Cup"
-              description="48 heures pour créer un jeu vidéo en équipe. Créativité, collaboration et passion au rendez-vous."
-              date={new Date("2025-01-15T14:00:00")}
-              inscriptionDeadline={new Date("2025-01-10T23:59:59")}
-              heure="14h00"
-              lieu="MyDigitalSchool"
-              rules="Be respectful and creative"
-              gameId="game1"
-              createdAt={new Date()}
-              updatedAt={new Date()}
-            />
-            </section>
-    <section style={{ marginBottom: "3rem" }}>
-            <h2>Card Default (Info)</h2>
-             <Card
+          <h2>Card register</h2>
+
+          <Card
+            id="1"
+            variant="register"
+            status="ongoing"
+            icon={<BulbIcon />}
+            name="Rocket League – Aerial Cup"
+            description="48 heures pour créer un jeu vidéo en équipe. Créativité, collaboration et passion au rendez-vous."
+            date={new Date("2025-01-15T14:00:00")}
+            inscriptionDeadline={new Date("2025-01-10T23:59:59")}
+            heure="14h00"
+            lieu="MyDigitalSchool"
+            rules="Be respectful and creative"
+            gameId="game1"
+            createdAt={new Date()}
+            updatedAt={new Date()}
+          />
+        </section>
+        <section style={{ marginBottom: "3rem" }}>
+          <h2>Card featured</h2>
+          <Card
             id="7"
-            variant="vedette"
+            variant="featured"
             status="upcoming"
             duration="2 jours"
             animatedBy="Stella @ MyDigitalSchool"
-            icon={<MessageSquareIcon />}
+            icon={<BulbIcon />}
             name="Winter Game Jam 2025 – Create & Play"
             description="48 heures pour créer un jeu vidéo en équipe. Créativité, collaboration et passion au rendez-vous."
             date={new Date("2025-02-22T14:00:00")}
@@ -47,17 +45,22 @@ export default function Home() {
             createdAt={new Date()}
             updatedAt={new Date()}
           />
-
         </section>
 
         <section>
-          <h2>Card Compact (Mini)</h2>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "1rem" }}>
-            <Card 
+          <h2>Card default</h2>
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
+              gap: "1rem",
+            }}
+          >
+            <Card
               id="4"
-              variant="compact"
+              variant="default"
               status="upcoming"
-              icon={<MessageSquareIcon />}
+              icon={<BulbIcon />}
               name="Rassemblez vos coéquipiers"
               description="Formez une équipe et participez ensemble."
               date={new Date("2025-01-15T14:00:00")}
@@ -69,7 +72,6 @@ export default function Home() {
               createdAt={new Date()}
               updatedAt={new Date()}
             />
-           
           </div>
         </section>
       </main>

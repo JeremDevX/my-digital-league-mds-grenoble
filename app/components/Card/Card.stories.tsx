@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import Card from "./Card";
-import { MessageSquareIcon } from "../Icons/Icons";
+import { BulbIcon } from "../Icons/Icons";
 
 const meta = {
   title: "Components/Card",
@@ -26,7 +26,7 @@ const meta = {
       options: ["none", "message"],
       mapping: {
         none: undefined,
-        message: <MessageSquareIcon />,
+        message: <BulbIcon />,
       },
       control: {
         type: "radio",
@@ -57,7 +57,7 @@ export const Default: Story = {
     ...baseArgs,
     variant: "default",
     status: "upcoming",
-    icon: <MessageSquareIcon />,
+    icon: <BulbIcon />,
   },
 };
 
@@ -66,7 +66,7 @@ export const Register: Story = {
     ...baseArgs,
     variant: "register",
     status: "ongoing",
-    icon: <MessageSquareIcon />,
+    icon: <BulbIcon />,
     heure: "14h00",
     lieu: "MyDigitalSchool",
   },
@@ -77,7 +77,7 @@ export const Featured: Story = {
     ...baseArgs,
     variant: "featured",
     status: "upcoming",
-    icon: <MessageSquareIcon />,
+    icon: <BulbIcon />,
     duration: "2 jours",
     animatedBy: "Stella @ MyDigitalSchool",
   },

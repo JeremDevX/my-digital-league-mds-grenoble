@@ -24,11 +24,11 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      color: $--color-icon-dark;
       width: 40px;
       height: 40px;
 
       svg {
+        color: $--color-light;
         width: 16px;
         height: 16px;
       }
@@ -72,21 +72,12 @@
     .iconWrapper {
       background-color: $--color-bg-dark;
       border-radius: $--border-radius-xl;
-      color: $--color-icon-dark;
       width: 40px;
       height: 40px;
       svg {
-        width: 20px;
-        height: 20px;
-      }
-      @media (min-width: $--tablet) {
-        width: 48px;
-        height: 48px;
-
-        svg {
-          width: 24px;
-          height: 24px;
-        }
+        color: $--color-icon-dark;
+        width: 13px;
+        height: 17px;
       }
     }
     .title {
@@ -160,21 +151,14 @@
   .header {
     gap: $--spacing-md;
     .iconWrapper {
-      background-color: $--color-bg-dark;
+      background-color: $--color-primary;
       border-radius: $--border-radius-xl;
       color: $--color-icon-dark;
+      width: 40px;
+      height: 40px;
       svg {
-        width: 20px;
-        height: 20px;
-      }
-      @media (min-width: $--tablet) {
-        width: 48px;
-        height: 48px;
-
-        svg {
-          width: 24px;
-          height: 24px;
-        }
+        width: 13px;
+        height: 17px;
       }
     }
     .title {
