@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import "./CardIcon.module.scss";
+import styles from "./CardIcon.module.scss";
 
 interface CardIconProps {
   icon: ReactNode;
@@ -9,12 +9,10 @@ interface CardIconProps {
 
 export default function CardIcon(props: CardIconProps) {
   return (
-    <div className="cardIconContainer">
-      {props.icon}
-      <div className="cardIconText">
-        <h3>{props.titre}</h3>
-        <p>{props.sousTitre}</p>
-      </div>
+    <div className={styles.cardIconContainer}>
+      <div className={styles.cardIcon}>{props.icon}</div>
+      <div className={styles.cardIconTitle}>{props.titre}</div>
+      <div className={styles.cardIconSubtitle}>{props.sousTitre}</div>
     </div>
   );
 }

@@ -1,22 +1,38 @@
+@import "../../styles/variables.scss";
+
 .cardIconContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  align-content: center;
   text-align: center;
   padding: $--spacing-sm;
+  border-radius: $--border-radius-md;
+  background-color: inherit;
+  max-width: 300px;
+  height: auto;
 
-  .cardIconText {
-    h3 {
-      color: $--color-light;
-      font-size: $--font-size-lg;
-      text-transform: uppercase;
-      margin-bottom: $--spacing-xs;
-    }
+  .cardIcon {
+    background-color: $--color-bg-dark;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: $--border-radius-sm;
+    margin-bottom: $--spacing-sm;
+    padding: $--spacing-md;
+  }
 
-    p {
-      color: $--color-light;
-      font-size: $--font-size-sm;
-      margin: 0;
-    }
+  .cardIconTitle {
+    color: $--color-light;
+    font-size: $--font-size-md;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: $--spacing-xs;
+  }
+  .cardIconSubtitle {
+    color: $--color-light;
+    font-size: $--font-size-sm;
+    text-align: center;
+    margin: 0;
   }
 }
