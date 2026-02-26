@@ -1,57 +1,18 @@
 "use client";
 
-import * as z from "zod";
-import { useForm } from "react-hook-form";
-import { useState, useTransition } from "react";
-import { useSearchParams } from "next/navigation";
-import { zodResolver } from "@hookform/resolvers/zod";
+import { Controller } from "react-hook-form";
 import Link from "next/link";
 
-import { LoginSchema } from "@/schemas";
 import { CardWrapper } from "@/app/components/auth/CardWrapper";
-import { login } from "@/actions/login";
 import { FormError } from "@/app/components/auth/FormError";
 import { FormSuccess } from "@/app/components/auth/FormSuccess";
 import styles from "./Auth.module.scss";
 
+import Input from "@/app/components/input/Input";
+import Button from "@/app/components/Button/Button";
+import { useLogin } from "@/hooks/auth/useLogin";
 export const LoginForm = () => {
-  const searchParams = useSearchParams();
-  const urlError = searchParams.get("error") === "OAuthAccountNotLinked"
-    ? "Email already in use with different provider!"
-    : "";
-
-  const [error, setError] = useState<string | undefined>("");
-  const [success, setSuccess] = useState<string | undefined>("");
-  const [isPending, startTransition] = useTransition();
-
-  const form = useForm<z.infer<typeof LoginSchema>>({
-    resolver: zodResolver(LoginSchema),
-    defaultValues: {
-      email: "",
-      password: "",
-    },
-  });
-
-  const onSubmit = (values: z.infer<typeof LoginSchema>) => {
-    setError("");
-    setSuccess("");
-
-    startTransition(() => {
-      login(values)
-        .then((data) => {
-          if (data?.error) {
-            form.reset();
-            setError(data.error);
-          }
-
-          if (data?.success) {
-            form.reset();
-            setSuccess(data.success);
-          }
-        })
-        .catch(() => setError("Something went wrong"));
-    });
-  };
+  const { form, error, success, isPending, onSubmit } = useLogin();
 
   return (
     <CardWrapper
@@ -60,44 +21,57 @@ export const LoginForm = () => {
       backButtonHref="/auth/register"
       showSocial
     >
-      <form onSubmit={form.handleSubmit(onSubmit)} className={styles.form}>
+      <form onSubmit={onSubmit} className={styles.form}>
         <div className={styles.formGroup}>
-            <label htmlFor="email">Email</label>
-            <input
-              {...form.register("email")}
-              id="email"
-              disabled={isPending}
-              placeholder="john.doe@example.com"
-              type="email"
-            />
-            {form.formState.errors.email && (
-                <span className={styles.error}>{form.formState.errors.email.message}</span>
+          <Controller
+            control={form.control}
+            name="email"
+            render={({ field }) => (
+              <Input
+                label="Email"
+                type="email"
+                placeholder="john.doe@example.com"
+                value={field.value}
+                onChange={field.onChange}
+                disabled={isPending}
+                error={!!form.formState.errors.email}
+                errorMessage={form.formState.errors.email?.message}
+              />
             )}
+          />
         </div>
+
         <div className={styles.formGroup}>
-            <label htmlFor="password">Password</label>
-            <input
-              {...form.register("password")}
-              id="password"
-              disabled={isPending}
-              placeholder="******"
-              type="password"
-            />
-             {form.formState.errors.password && (
-                <span className={styles.error}>{form.formState.errors.password.message}</span>
+          <Controller
+            control={form.control}
+            name="password"
+            render={({ field }) => (
+              <Input
+                label="Password"
+                type="password"
+                placeholder="******"
+                value={field.value}
+                onChange={field.onChange}
+                disabled={isPending}
+                error={!!form.formState.errors.password}
+                errorMessage={form.formState.errors.password?.message}
+              />
             )}
+          />
         </div>
-        
+
         <Link href="/auth/reset" className={styles.forgotPassword}>
-            Forgot password?
+          Forgot password?
         </Link>
-        
-        <FormError message={error || urlError} />
+
+        <FormError message={error} />
         <FormSuccess message={success} />
-        
-        <button type="submit" disabled={isPending}>
-          {isPending ? "Logging in..." : "Login"}
-        </button>
+        <Button
+          label={isPending ? "Logging in..." : "Login"}
+          type="primary"
+          fullWidth
+          disabled={isPending}
+        />
       </form>
     </CardWrapper>
   );

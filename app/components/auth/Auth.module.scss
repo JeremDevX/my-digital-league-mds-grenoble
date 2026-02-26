@@ -6,7 +6,9 @@
   background-color: $--color-bg-card-dark;
   border-radius: $--border-radius-md;
   padding: $--spacing-xl;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
   margin: 0 auto;
   color: $--color-light;
 }
@@ -44,36 +46,6 @@
     display: flex;
     flex-direction: column;
     gap: $--spacing-xs;
-
-    label {
-      font-size: $--font-size-sm;
-      font-weight: 500;
-    }
-
-    input {
-      background-color: $--color-bg-dark;
-      border: 1px solid transparent;
-      border-radius: $--border-radius-sm;
-      padding: $--spacing-sm $--spacing-md;
-      color: $--color-light;
-      font-size: $--font-size-md;
-      outline: none;
-      transition: border-color 0.2s;
-
-      &:focus {
-        border-color: $--color-primary;
-      }
-      
-      &:disabled {
-        opacity: 0.5;
-        cursor: not-allowed;
-      }
-    }
-
-    .error {
-      color: #ef4444;
-      font-size: $--font-size-xs;
-    }
   }
 
   .forgotPassword {
@@ -81,30 +53,9 @@
     color: $--color-primary;
     text-decoration: none;
     align-self: flex-end;
-    
+
     &:hover {
       text-decoration: underline;
-    }
-  }
-
-  button[type="submit"] {
-    background-color: $--color-primary;
-    color: white;
-    padding: $--spacing-sm $--spacing-md;
-    border-radius: $--border-radius-sm;
-    border: none;
-    font-size: $--font-size-md;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.2s;
-
-    &:hover {
-      background-color: $--color-secondary;
-    }
-
-    &:disabled {
-      opacity: 0.7;
-      cursor: not-allowed;
     }
   }
 }
@@ -112,12 +63,12 @@
 .footer {
   margin-top: $--spacing-lg;
   text-align: center;
-  
+
   a {
     color: $--color-text-dark;
     font-size: $--font-size-sm;
     text-decoration: none;
-    
+
     &:hover {
       color: $--color-light;
       text-decoration: underline;
