@@ -1,43 +1,16 @@
 "use client";
 
-import * as z from "zod";
-import { useState, useTransition } from "react";
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-
-import { RegisterSchema } from "@/schemas";
+import { Controller } from "react-hook-form";
 import { CardWrapper } from "@/app/components/auth/CardWrapper";
-import { register } from "@/actions/register";
 import { FormError } from "@/app/components/auth/FormError";
 import { FormSuccess } from "@/app/components/auth/FormSuccess";
+import Button from "@/app/components/Button/Button";
+import Input from "@/app/components/input/Input";
+import { useRegister } from "@/hooks/auth/useRegister";
 import styles from "./Auth.module.scss";
 
 export const RegisterForm = () => {
-  const [error, setError] = useState<string | undefined>("");
-  const [success, setSuccess] = useState<string | undefined>("");
-  const [isPending, startTransition] = useTransition();
-
-  const form = useForm<z.infer<typeof RegisterSchema>>({
-    resolver: zodResolver(RegisterSchema),
-    defaultValues: {
-      email: "",
-      password: "",
-      name: "",
-    },
-  });
-
-  const onSubmit = (values: z.infer<typeof RegisterSchema>) => {
-    setError("");
-    setSuccess("");
-
-    startTransition(() => {
-      register(values)
-        .then((data) => {
-          setError(data.error);
-          setSuccess(data.success);
-        });
-    });
-  };
+  const { form, onSubmit, error, success, isPending } = useRegister();
 
   return (
     <CardWrapper
@@ -46,52 +19,72 @@ export const RegisterForm = () => {
       backButtonHref="/auth/login"
       showSocial
     >
-       <form onSubmit={form.handleSubmit(onSubmit)} className={styles.form}>
+      <form onSubmit={form.handleSubmit(onSubmit)} className={styles.form}>
         <div className={styles.formGroup}>
-            <label htmlFor="name">Name</label>
-            <input
-              {...form.register("name")}
-              id="name"
-              disabled={isPending}
-              placeholder="John Doe"
-            />
-            {form.formState.errors.name && (
-                <span className={styles.error}>{form.formState.errors.name.message}</span>
+          <Controller
+            control={form.control}
+            name="name"
+            render={({ field }) => (
+              <Input
+                label="Name"
+                placeholder="John Doe"
+                disabled={isPending}
+                value={field.value}
+                onChange={(val) => field.onChange(val)}
+                error={!!form.formState.errors.name}
+                errorMessage={form.formState.errors.name?.message}
+              />
             )}
+          />
         </div>
+
         <div className={styles.formGroup}>
-            <label htmlFor="email">Email</label>
-            <input
-              {...form.register("email")}
-              id="email"
-              disabled={isPending}
-              placeholder="john.doe@example.com"
-              type="email"
-            />
-            {form.formState.errors.email && (
-                <span className={styles.error}>{form.formState.errors.email.message}</span>
+          <Controller
+            control={form.control}
+            name="email"
+            render={({ field }) => (
+              <Input
+                label="Email"
+                type="email"
+                placeholder="john.doe@example.com"
+                disabled={isPending}
+                value={field.value}
+                onChange={(val) => field.onChange(val)}
+                error={!!form.formState.errors.email}
+                errorMessage={form.formState.errors.email?.message}
+              />
             )}
+          />
         </div>
+
         <div className={styles.formGroup}>
-            <label htmlFor="password">Password</label>
-            <input
-              {...form.register("password")}
-              id="password"
-              disabled={isPending}
-              placeholder="******"
-              type="password"
-            />
-             {form.formState.errors.password && (
-                <span className={styles.error}>{form.formState.errors.password.message}</span>
+          <Controller
+            control={form.control}
+            name="password"
+            render={({ field }) => (
+              <Input
+                label="Password"
+                type="password"
+                placeholder="******"
+                disabled={isPending}
+                value={field.value}
+                onChange={(val) => field.onChange(val)}
+                error={!!form.formState.errors.password}
+                errorMessage={form.formState.errors.password?.message}
+              />
             )}
+          />
         </div>
-        
+
         <FormError message={error} />
         <FormSuccess message={success} />
-        
-        <button type="submit" disabled={isPending}>
-          {isPending ? "Creating account..." : "Create an account"}
-        </button>
+
+        <Button
+          type="primary"
+          label={isPending ? "Creating account..." : "Create an account"}
+          fullWidth
+          disabled={isPending}
+        />
       </form>
     </CardWrapper>
   );
