@@ -6,34 +6,6 @@ const meta = {
   title: "Components/Card",
   component: Card,
   tags: ["autodocs"],
-  decorators: [
-    (Story) => (
-      <div style={{ fontFamily: "Inter, sans-serif" }}>
-        <Story />
-      </div>
-    ),
-  ],
-  argTypes: {
-    variant: {
-      control: "select",
-      options: ["default", "register", "featured"],
-    },
-    status: {
-      control: "select",
-      options: ["upcoming", "ongoing"],
-    },
-    icon: {
-      options: ["none", "message"],
-      mapping: {
-        none: undefined,
-        message: <BulbIcon />,
-      },
-      control: {
-        type: "radio",
-      },
-    },
-    onClick: { action: "clicked" },
-  },
 } satisfies Meta<typeof Card>;
 
 export default meta;
