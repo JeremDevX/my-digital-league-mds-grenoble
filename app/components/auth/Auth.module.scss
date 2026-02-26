@@ -46,34 +46,13 @@
     display: flex;
     flex-direction: column;
     gap: $--spacing-xs;
-    width: 100%;
-
-    & > div {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-    }
-
-    :global(.errorMessage) {
-      color: #ef4444;
-      font-size: $--font-size-xs;
-      margin-top: $--spacing-xs;
-      display: block;
-    }
-
-    :global(.errorActive) {
-      border-color: #ef4444;
-    }
 
     label {
       font-size: $--font-size-sm;
       font-weight: 500;
-      display: block;
-      margin-bottom: 4px;
     }
 
     input {
-      width: 100%;
       background-color: $--color-bg-dark;
       border: 1px solid transparent;
       border-radius: $--border-radius-sm;
@@ -92,6 +71,7 @@
         cursor: not-allowed;
       }
     }
+
     .error {
       color: #ef4444;
       font-size: $--font-size-xs;
