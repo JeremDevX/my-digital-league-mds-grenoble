@@ -22,7 +22,6 @@ describe("Radio Component", () => {
 
   it("appelle la fonction onChange lors du clic", () => {
     render(<Radio {...defaultProps} />);
-    // Ajout de hidden: true pour trouver l'input même s'il est masqué par le CSS
     const input = screen.getByRole("radio", { hidden: true });
 
     fireEvent.click(input);
