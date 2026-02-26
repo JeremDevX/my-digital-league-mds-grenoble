@@ -13,52 +13,38 @@
   @media (min-width: $--laptop) {
     max-width: 400px;
   }
-}
 
-.header {
-  display: flex;
-  align-items: center;
-  gap: $--spacing-md;
-  margin-bottom: $--spacing-md;
-}
+  .header {
+    display: flex;
+    align-items: center;
+    gap: $--spacing-sm;
+    margin-bottom: $--spacing-md;
+    .iconWrapper {
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $--color-icon-dark;
+      width: 40px;
+      height: 40px;
 
-.iconWrapper {
-  flex-shrink: 0;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: $--color-bg-dark;
-  border-radius: $--border-radius-xl;
-  color: $--color-icon-dark;
-
-  svg {
-    width: 20px;
-    height: 20px;
-  }
-
-  @media (min-width: $--tablet) {
-    width: 48px;
-    height: 48px;
-
-    svg {
-      width: 24px;
-      height: 24px;
+      svg {
+        width: 16px;
+        height: 16px;
+      }
     }
-  }
-}
+    .title {
+      font-size: $--font-size-md;
+      font-weight: 600;
+      color: $--color-light;
+      margin: 0;
+      line-height: 1.3;
+      flex: 1;
 
-.title {
-  font-size: $--font-size-md;
-  font-weight: 600;
-  color: $--color-light;
-  margin: 0;
-  line-height: 1.3;
-  flex: 1;
-
-  @media (min-width: $--tablet) {
-    font-size: $--font-size-lg;
+      @media (min-width: $--tablet) {
+        font-size: $--font-size-md;
+      }
+    }
   }
 }
 
@@ -75,74 +61,129 @@
   text-overflow: ellipsis;
 }
 
-.details {
-  display: flex;
-  flex-direction: row;
-  gap: $--spacing-sm;
-  margin-bottom: $--spacing-lg;
-}
-
-.detailRow {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: $--spacing-xs;
-  padding: $--spacing-xs 0;
-
-  @media (min-width: $--tablet) {
-    justify-content: space-between;
-    align-items: left;
-    gap: $--spacing-md;
-  }
-}
-
-.label {
-  font-size: $--font-size-xs;
-  color: $--color-text-dark;
-  font-weight: 500;
-
-  @media (min-width: $--tablet) {
-    font-size: $--font-size-sm;
-  }
-}
-
-.value {
-  font-size: $--font-size-xs;
-  color: $--color-light;
-  font-weight: 400;
-  display: flex;
-  align-items: center;
-  gap: $--spacing-xs;
-
-  svg {
-    width: 14px;
-    height: 14px;
-    color: $--color-icon-dark;
-  }
-
-  @media (min-width: $--tablet) {
-    font-size: $--font-size-sm;
-  }
-}
-
 .buttonWrapper {
   margin-top: $--spacing-md;
 }
 
 // Card variants
-.default {
+.register {
+  .header {
+    gap: $--spacing-md;
+    .iconWrapper {
+      background-color: $--color-bg-dark;
+      border-radius: $--border-radius-xl;
+      color: $--color-icon-dark;
+      width: 40px;
+      height: 40px;
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+      @media (min-width: $--tablet) {
+        width: 48px;
+        height: 48px;
+
+        svg {
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+    .title {
+      font-size: $--font-size-md;
+
+      @media (min-width: $--tablet) {
+        font-size: $--font-size-lg;
+      }
+    }
+  }
+
+  .details {
+    display: flex;
+    flex-direction: row;
+    gap: $--spacing-sm;
+    margin-bottom: $--spacing-lg;
+    .detailRow {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: $--spacing-xs;
+      padding: $--spacing-xs 0;
+
+      @media (min-width: $--tablet) {
+        justify-content: space-between;
+        align-items: left;
+      }
+      .label {
+        font-size: $--font-size-xs;
+        color: $--color-text-dark;
+        font-weight: 500;
+
+        @media (min-width: $--tablet) {
+          font-size: $--font-size-sm;
+        }
+      }
+      .value {
+        font-size: $--font-size-xs;
+        color: $--color-light;
+        font-weight: 400;
+        display: flex;
+        align-items: center;
+        gap: $--spacing-xs;
+
+        svg {
+          width: 14px;
+          height: 14px;
+          color: $--color-icon-dark;
+        }
+
+        @media (min-width: $--tablet) {
+          font-size: $--font-size-sm;
+        }
+      }
+    }
+  }
+
   @media (min-width: $--tablet) {
     padding: $--spacing-lg;
   }
 }
 
-.vedette {
+.featured {
   display: flex;
   flex-direction: column;
   padding: $--spacing-md;
 
   @media (min-width: $--tablet) {
     padding: $--spacing-lg;
+  }
+  .header {
+    gap: $--spacing-md;
+    .iconWrapper {
+      background-color: $--color-bg-dark;
+      border-radius: $--border-radius-xl;
+      color: $--color-icon-dark;
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+      @media (min-width: $--tablet) {
+        width: 48px;
+        height: 48px;
+
+        svg {
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+    .title {
+      font-size: $--font-size-md;
+
+      @media (min-width: $--tablet) {
+        font-size: $--font-size-lg;
+      }
+    }
   }
   .metaInfo {
     color: $--color-light;
@@ -169,65 +210,6 @@
       .metaValue {
         text-decoration: underline;
       }
-    }
-  }
-}
-
-.compact {
-  padding: $--spacing-sm;
-
-  .iconWrapper {
-    width: 32px;
-    height: 32px;
-
-    svg {
-      width: 16px;
-      height: 16px;
-    }
-  }
-
-  .title {
-    font-size: $--font-size-sm;
-  }
-
-  .description {
-    font-size: $--font-size-xs;
-    -webkit-line-clamp: 1;
-    line-clamp: 1;
-    margin-bottom: $--spacing-sm;
-  }
-
-  .details {
-    display: none;
-  }
-
-  .buttonWrapper {
-    display: none;
-  }
-
-  .statusBadge {
-    display: none;
-  }
-
-  @media (min-width: $--tablet) {
-    padding: $--spacing-md;
-
-    .iconWrapper {
-      width: 40px;
-      height: 40px;
-
-      svg {
-        width: 20px;
-        height: 20px;
-      }
-    }
-
-    .title {
-      font-size: $--font-size-md;
-    }
-
-    .description {
-      font-size: $--font-size-sm;
     }
   }
 }

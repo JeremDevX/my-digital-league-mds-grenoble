@@ -6,7 +6,7 @@ import { ArrowCircleRightIcon } from "../Icons/Icons";
 import Button from "../Button/Button";
 import { Event } from "@/generated/prisma/client";
 
-export type CardVariant = "default" | "compact" | "vedette";
+export type CardVariant = "default" | "register" | "featured";
 export type CardStatus = "upcoming" | "ongoing";
 
 interface MetaInfo {
@@ -15,8 +15,9 @@ interface MetaInfo {
 }
 
 interface CardProps extends Event {
-  icon: ReactNode;
-  description: string;
+  name: string;
+  icon?: ReactNode;
+  description?: string;
   heure?: string;
   lieu?: string;
   animatedBy?: string;
@@ -32,7 +33,6 @@ export default function Card({
   icon,
   name,
   date,
-  inscriptionDeadline,
   description,
   heure,
   lieu,
@@ -45,7 +45,6 @@ export default function Card({
 }: CardProps) {
   const isClickable = onClick && !disabled;
   const eventDate = new Date(date);
-  const deadline = inscriptionDeadline ? new Date(inscriptionDeadline) : null;
 
   const calculateDaysUntilEvent = (eventDate: Date): string => {
     const today = new Date();
@@ -82,7 +81,7 @@ export default function Card({
       className={`
         ${styles.card}
         ${styles[variant]}
-        ${status === "ongoing" ? styles.featured : ""}
+        ${variant === "featured" && status === "ongoing" ? styles.featured : ""}
       `}
       onClick={isClickable ? onClick : undefined}
       role={isClickable ? "button" : undefined}
@@ -98,32 +97,51 @@ export default function Card({
           : undefined
       }
     >
-      {variant === "vedette" ? (
+      {variant === "default" ? (
         <>
           <div className={styles.header}>
-            <div className={styles.iconWrapper}>{icon}</div>
-            <div className={styles.titleSection}>
-              <h3 className={styles.title}>{name}</h3>
+            {icon ? <div className={styles.iconWrapper}>{icon}</div> : null}
+            <h3 className={styles.title}>{name}</h3>
+          </div>
+
+          {description ? (
+            <p className={styles.description}>{description}</p>
+          ) : null}
+        </>
+      ) : variant === "register" ? (
+        <>
+          <div className={styles.header}>
+            {icon ? <div className={styles.iconWrapper}>{icon}</div> : null}
+            <h3 className={styles.title}>{name}</h3>
+          </div>
+
+          <div className={styles.details}>
+            <div className={styles.detailRow}>
+              <span className={styles.label}>Date</span>
+              <span className={styles.value}>
+                {formatDate(eventDate)}
+              </span>
+            </div>
+
+            <div className={styles.detailRow}>
+              <span className={styles.label}>Heure</span>
+              <span className={styles.value}>{heure}</span>
+            </div>
+
+            <div className={styles.detailRow}>
+              <span className={styles.label}>Lieu</span>
+              <span className={styles.value}>{lieu}</span>
             </div>
           </div>
-          <div className={styles.metaInfo}>
-                <span className={styles.metaAnimé}>Animé par <span className={styles.metaValue}>{animatedBy}</span></span>
-                
-                <div className={styles.metaDate}>
-                <span className={styles.metaDebut}>
-                  Débute dans {calculateDaysUntilEvent(eventDate)} 
-                </span>
-                   <span className={styles.metaDurée}>· Dure {duration}</span>
-                </div>
-              </div>
-          <p className={styles.description}>{description}</p>
-         
+
+          {description ? (
+            <p className={styles.description}>{description}</p>
+          ) : null}
+
           <div className={styles.buttonWrapper}>
             <Button
               label={status === "ongoing" ? "S'inscrire" : "Voir détails"}
               type="primary"
-              icon={<ArrowCircleRightIcon />}
-              iconPosition="right"
               onClick={() => {
                 onClick?.();
               }}
@@ -133,39 +151,37 @@ export default function Card({
       ) : (
         <>
           <div className={styles.header}>
-            <div className={styles.iconWrapper}>{icon}</div>
-            <h3 className={styles.title}>{name}</h3>
+            {icon ? <div className={styles.iconWrapper}>{icon}</div> : null}
+            <div className={styles.titleSection}>
+              <h3 className={styles.title}>{name}</h3>
+            </div>
           </div>
-
-          <div className={styles.details}>
-            <div className={styles.detailRow}>
-              <span className={styles.label}>Date</span>
-              <span className={styles.value}>{formatDate(eventDate)}</span>
-            </div>
-
-            <div className={styles.detailRow}>
-              <span className={styles.label}>Heure</span>
-              <span className={styles.value}>
-                {heure}
+          <div className={styles.metaInfo}>
+            {animatedBy ? (
+              <span className={styles.metaAnimé}>
+                Animé par <span className={styles.metaValue}>{animatedBy}</span>
               </span>
-            </div>
+            ) : null}
 
-            <div className={styles.detailRow}>
-              <span className={styles.label}>Lieu</span>
-              <span className={styles.value}>
-                {lieu}
+            <div className={styles.metaDate}>
+              <span className={styles.metaDebut}>
+                Débute dans {calculateDaysUntilEvent(eventDate)}
               </span>
+              {duration ? (
+                <span className={styles.metaDurée}>· Dure {duration}</span>
+              ) : null}
             </div>
-
           </div>
+          {description ? (
+            <p className={styles.description}>{description}</p>
+          ) : null}
 
-          <p className={styles.description}>{description}</p>
-
-        
           <div className={styles.buttonWrapper}>
             <Button
               label={status === "ongoing" ? "S'inscrire" : "Voir détails"}
               type="primary"
+              icon={<ArrowCircleRightIcon />}
+              iconPosition="right"
               onClick={() => {
                 onClick?.();
               }}
