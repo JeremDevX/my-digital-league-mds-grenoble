@@ -3,7 +3,7 @@
 .header {
   display: flex;
   align-items: center;
-  padding: $--spacing-md $--spacing-lg;
+  padding: $--spacing-md 0rem;
   position: relative;
   background: $--color-bg-dark;
   justify-content: space-between;
@@ -69,7 +69,7 @@
     transition: max-height 0.3s ease;
 
     &[data-open="true"] {
-      max-height: 500px;
+      max-height: 100vh;
     }
 
     @media (min-width: $--tablet) {
@@ -96,8 +96,10 @@
   gap: 1.6rem;
   width: 100%;
   margin: 0;
-  margin-left: 62px;
+  padding: 0 0 0 15px;
   display: flex;
+  z-index: 1;
+  background: $--color-bg-dark;
 
   @media (min-width: $--tablet) {
     flex-direction: row;
