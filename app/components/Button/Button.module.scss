@@ -43,8 +43,8 @@
 }
 
 .tertiary {
-  background-color: $--color-bg-card-dark;
-  border-color: $--color-bg-card-dark;
+  background-color: $--color-bg-component-dark;
+  border-color: $--color-bg-component-dark;
 }
 
 .secondary:disabled {
@@ -53,8 +53,8 @@
 }
 
 .tertiary:not(:disabled):hover {
-  background-color: $--color-bg-card-dark-hover;
-  border-color: $--color-bg-card-dark-hover;
+  background-color: $--color-bg-component-dark-hover;
+  border-color: $--color-bg-component-dark-hover;
 }
 
 .fullWidth {

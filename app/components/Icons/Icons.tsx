@@ -9,7 +9,7 @@ type IconProps = {
 export const ArrowCircleRightIcon = ({
   width = 20,
   height = 20,
-  color = "black",
+  color = "currentColor",
 }: IconProps): ReactNode => (
   <svg
     width={width}
@@ -529,7 +529,7 @@ export const ClockIcon = ({
   <svg
     width={width}
     height={height}
-    viewBox="0 0 50 50"
+    viewBox="0 0 13 17.5312"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
@@ -737,6 +737,25 @@ export const LinkIcon = ({
       stroke-width="2"
       stroke-linecap="round"
       troke-linejoin="round"
+    />
+  </svg>
+);
+
+export const BulbIcon = ({
+  width = 20,
+  height = 20,
+  color = "currentColor",
+}: IconProps): ReactNode => (
+  <svg
+    width={width}
+    height={height}
+    viewBox="0 0 13 17"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M9.91589 12.75C10.163 12.0096 10.6573 11.3389 11.2159 10.7611C12.3229 9.61895 13 8.075 13 6.375C13 2.85547 10.0885 0 6.5 0C2.91146 0 0 2.85547 0 6.375C0 8.075 0.677083 9.61895 1.78411 10.7611C2.34271 11.3389 2.84036 12.0096 3.08411 12.75H9.9125H9.91589ZM9.75 14.3438H3.25V14.875C3.25 16.3426 4.46198 17.5312 5.95833 17.5312H7.04167C8.53802 17.5312 9.75 16.3426 9.75 14.875V14.3438ZM6.22917 3.71875C4.88177 3.71875 3.79167 4.78789 3.79167 6.10938C3.79167 6.55098 3.42943 6.90625 2.97917 6.90625C2.52891 6.90625 2.16667 6.55098 2.16667 6.10938C2.16667 3.90801 3.98464 2.125 6.22917 2.125C6.67943 2.125 7.04167 2.48027 7.04167 2.92188C7.04167 3.36348 6.67943 3.71875 6.22917 3.71875Z"
+      fill={color}
     />
   </svg>
 );
