@@ -11,7 +11,7 @@
 
 | Variable                 | Valeur    | Usage                                    |
 | ------------------------ | --------- | ---------------------------------------- |
-| `$--color-bg-card-dark`  | `#1a1c26` | Fond des cartes (thème sombre)           |
+| `$--color-bg-component-dark`  | `#1a1c26` | Fond des cartes (thème sombre)           |
 | `$--color-bg-dark`       | `#272932` | Fond principal (thème sombre)            |
 | `$--color-light`         | `#ffffff` | Texte et éléments clairs                 |
 | `$--color-text-dark`     | `#a9a9ad` | Texte secondaire (thème sombre)          |

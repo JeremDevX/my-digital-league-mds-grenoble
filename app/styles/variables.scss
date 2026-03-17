@@ -1,8 +1,8 @@
 // ===== COLOR =====
 
-$--color-bg-card-dark: #1a1c26;
-$--color-bg-card-dark-hover: #666666;
-$--color-bg-dark: #272932;
+$--color-bg-component-dark: #272932;
+$--color-bg-component-dark-hover: #666666;
+$--color-bg-dark: #1a1c26;
 $--color-light: #ffffff;
 $--color-text-dark: #a9a9ad;
 $--color-icon-dark: #8f8f8f;
@@ -19,6 +19,11 @@ $--font-size-sm: 1.4rem;
 $--font-size-md: 1.6rem;
 $--font-size-lg: 2rem;
 $--font-size-xl: 2.4rem;
+
+// ===== FONT FAMILY =====
+
+$--font-family-inter: "Inter", sans-serif;
+$--font-family-montserrat: "Montserrat", sans-serif;
 
 // ===== SPACING =====
 
