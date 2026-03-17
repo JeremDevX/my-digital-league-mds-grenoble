@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
-import Card from "./Card";
+import Card, { BaseCard } from "./Card";
 import { BulbIcon } from "../Icons/Icons";
 
 const meta = {
@@ -10,6 +10,24 @@ const meta = {
 
 export default meta;
 type Story = StoryObj<typeof meta>;
+
+export const Base: Story = {
+  args: {
+    id: "base-event",
+    name: "Base card",
+    date: new Date("2026-03-15T14:00:00"),
+    inscriptionDeadline: new Date("2026-03-10T23:59:59"),
+    rules: "base rules",
+    gameId: "base-game",
+    createdAt: new Date("2026-02-26T09:00:00"),
+    updatedAt: new Date("2026-02-26T09:00:00"),
+  },
+  render: () => (
+    <BaseCard>
+      <div style={{ height: "100px" }} />
+    </BaseCard>
+  ),
+};
 
 const baseArgs = {
   id: "event-1",
@@ -24,10 +42,10 @@ const baseArgs = {
   updatedAt: new Date("2026-02-26T09:00:00"),
 };
 
-export const Default: Story = {
+export const Minimale: Story = {
   args: {
     ...baseArgs,
-    variant: "default",
+    variant: "minimale",
     status: "upcoming",
     icon: <BulbIcon />,
   },

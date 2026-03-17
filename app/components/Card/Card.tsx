@@ -1,12 +1,12 @@
 "use client";
 
 import styles from "./Card.module.scss";
-import { ReactNode } from "react";
+import { PropsWithChildren, ReactNode } from "react";
 import { ArrowCircleRightIcon } from "../Icons/Icons";
 import Button from "../Button/Button";
 import { Event } from "@/generated/prisma/client";
 
-export type CardVariant = "default" | "register" | "featured";
+export type CardVariant = "minimale" | "register" | "featured";
 export type CardStatus = "upcoming" | "ongoing";
 
 interface MetaInfo {
@@ -29,6 +29,10 @@ interface CardProps extends Event {
   metaInfo?: MetaInfo;
 }
 
+export function BaseCard(props: PropsWithChildren) {
+  return <div className={styles.card}>{props.children}</div>;
+}
+
 export default function Card({
   icon,
   name,
@@ -40,7 +44,7 @@ export default function Card({
   duration,
   onClick,
   disabled = false,
-  variant = "default",
+  variant = "minimale",
   status = "upcoming",
 }: CardProps) {
   const isClickable = onClick && !disabled;
@@ -51,10 +55,10 @@ export default function Card({
     today.setHours(0, 0, 0, 0);
     const event = new Date(eventDate);
     event.setHours(0, 0, 0, 0);
-    
+
     const diffTime = event.getTime() - today.getTime();
     const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-    
+
     if (diffDays <= 0) return "Aujourd'hui";
     if (diffDays === 1) return "un jour";
     return `${diffDays} jours`;
@@ -97,7 +101,7 @@ export default function Card({
           : undefined
       }
     >
-      {variant === "default" ? (
+      {variant === "minimale" ? (
         <>
           <div className={styles.header}>
             {icon ? <div className={styles.iconWrapper}>{icon}</div> : null}
@@ -118,9 +122,7 @@ export default function Card({
           <div className={styles.details}>
             <div className={styles.detailRow}>
               <span className={styles.label}>Date</span>
-              <span className={styles.value}>
-                {formatDate(eventDate)}
-              </span>
+              <span className={styles.value}>{formatDate(eventDate)}</span>
             </div>
 
             <div className={styles.detailRow}>
@@ -189,7 +191,6 @@ export default function Card({
           </div>
         </>
       )}
-
     </div>
   );
 }

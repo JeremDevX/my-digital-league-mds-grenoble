@@ -1,6 +1,6 @@
 "use client";
 
-import Card from "./components/Card/Card";
+import Card, { BaseCard } from "./components/Card/Card";
 import { BulbIcon } from "./components/Icons/Icons";
 
 export default function Home() {
@@ -48,7 +48,7 @@ export default function Home() {
         </section>
 
         <section>
-          <h2>Card default</h2>
+          <h2>Card minimale</h2>
           <div
             style={{
               display: "grid",
@@ -58,9 +58,8 @@ export default function Home() {
           >
             <Card
               id="4"
-              variant="default"
+              variant="minimale"
               status="upcoming"
-              icon={<BulbIcon />}
               name="Rassemblez vos coéquipiers"
               description="Formez une équipe et participez ensemble."
               date={new Date("2025-01-15T14:00:00")}
@@ -73,6 +72,10 @@ export default function Home() {
               updatedAt={new Date()}
             />
           </div>
+        </section>
+        <section>
+          <h2>Base Card</h2>
+          <BaseCard />
         </section>
       </main>
     </div>
