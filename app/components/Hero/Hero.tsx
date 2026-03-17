@@ -1,9 +1,10 @@
 "use client";
 import Button from "../Button/Button";
 import CardIcon from "../CardIcon/CardIcon";
-import { TeamIcon } from "../Icons/Icons";
+import { CupIcon, GroupIcon, PodiumIcon } from "../Icons/Icons";
 import styles from "./Hero.module.scss";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
+import "@splidejs/react-splide/css";
 
 export default function Hero() {
   return (
@@ -20,17 +21,39 @@ export default function Hero() {
           </span>
         </p>
         <div className={styles.buttons}>
-          <Button type="primary" label="Créer une compétition" />
+          <Button type="primary" label="Créer un évenement" />
           <Button type="secondary" label="Rejoindre une team" />
         </div>
       </div>
-      <div>
-        <Splide options={{}}>
-          <SplideSlide>
+      <div className={styles.carouselContainer}>
+        <Splide
+          options={{
+            arrows: true,
+            pagination: true,
+            rewind: true,
+            autoplay: true,
+            interval: 3000,
+          }}
+        >
+          <SplideSlide className={styles.slide}>
             <CardIcon
-              icon={<TeamIcon />}
+              icon={<GroupIcon color="grey" />}
               titre="Rassemblez vos coéquipiers"
-              sousTitre="Faites équipe avec vos amis et affrontez d'autres équipes dans des tournois palpitants."
+              sousTitre="Faites équipe avec vos amis et participez ensemble à des tournois communautaires !"
+            />
+          </SplideSlide>
+          <SplideSlide className={styles.slide}>
+            <CardIcon
+              icon={<CupIcon color="grey" />}
+              titre="Tournois communautaires"
+              sousTitre="Devenez organisateur et contribuez à bâtir la communauté Rematch"
+            />
+          </SplideSlide>
+          <SplideSlide className={styles.slide}>
+            <CardIcon
+              icon={<PodiumIcon color="grey" />}
+              titre="Participez pour gagner des prix"
+              sousTitre="You will soon be able to compete in tournaments and earn in-game rewards"
             />
           </SplideSlide>
         </Splide>
