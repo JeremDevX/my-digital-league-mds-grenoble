@@ -5,6 +5,7 @@ import { PropsWithChildren, ReactNode } from "react";
 import { ArrowCircleRightIcon } from "../Icons/Icons";
 import Button from "../Button/Button";
 import { Event } from "@/generated/prisma/client";
+import { calculateDaysUntilEvent, formatDate } from "@/lib/date";
 
 export type CardVariant = "minimale" | "register" | "featured";
 export type CardStatus = "upcoming" | "ongoing";
@@ -49,36 +50,6 @@ export default function Card({
 }: CardProps) {
   const isClickable = onClick && !disabled;
   const eventDate = new Date(date);
-
-  const calculateDaysUntilEvent = (eventDate: Date): string => {
-    const today = new Date();
-    today.setHours(0, 0, 0, 0);
-    const event = new Date(eventDate);
-    event.setHours(0, 0, 0, 0);
-
-    const diffTime = event.getTime() - today.getTime();
-    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-
-    if (diffDays <= 0) return "Aujourd'hui";
-    if (diffDays === 1) return "un jour";
-    return `${diffDays} jours`;
-  };
-
-  const formatDate = (date: Date | string) => {
-    try {
-      const d = typeof date === "string" ? new Date(date) : date;
-      if (isNaN(d.getTime())) {
-        return "Inconnu";
-      }
-      return new Intl.DateTimeFormat("fr-FR", {
-        day: "numeric",
-        month: "long",
-        year: "numeric",
-      }).format(d);
-    } catch {
-      return "Inconnu";
-    }
-  };
 
   return (
     <div
